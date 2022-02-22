@@ -32,14 +32,39 @@
     $(window).on('load',function(){
         $('#myModal').modal('show');
     });
-</script>  
+</script>
+
+
+<script > (function(d, s, id) {
+    var js;
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://embedsocial.com/cdn/ht.js";
+    d.getElementsByTagName("head")[0].appendChild(js);
+}(document, "script", "EmbedSocialHashtagScript")); </script> 
 
 <style type="text/css">
     .logo-cadastur{
 
         width: 245px;
         height: 80px;
-    }
+   }
+  .dropdown-item {
+
+        color: #ff9966 !important;
+  }
+
+.cid-sg2epAFQw3 .dropdown-item:hover, .cid-sg2epAFQw3 .dropdown-item:focus{
+
+        background: #ff9966 !important;
+        color: white !important;
+
+}
+
+    
     
 </style>  
   
@@ -126,8 +151,32 @@
                     <span></span>
                 </div>
             </button>
+
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-danger display-4" href="http://www.booking.com/Share-Hut006" target="_blank">&nbsp; &nbsp; Faça sua Reserva</a></li><li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="index.html#slider2-n" target="_blank">&nbsp; &nbsp; Fotos</a></li><li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="index.html#content9-p" target="_blank">&nbsp; &nbsp; Estadia</a></li>
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                  
+
+                    
+            <div class="dropdown">
+                <li class="nav-item nav-link link text-danger display-4 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Faça sua Reserva 
+                </li>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <!-- Link para o Airbnb-->
+                        <a class="dropdown-item" href="https://www.airbnb.com.br/rooms/51152588?guests=1&adults=1&s=67&unique_share_id=2a56042d-e3a0-4be4-a9f0-fbc2331227fc" target="_blank">Airbnb</a>
+
+
+                        <!-- Link para o Booking-->
+                        <a class="dropdown-item" href="http://www.booking.com/Share-Hut006" target="_blank">Booking</a>
+                    </div>
+            </div>
+
+
+
+
+
+                    <li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="index.html#slider2-n" target="_blank">&nbsp; &nbsp; Fotos</a></li><li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="index.html#content9-p" target="_blank">&nbsp; &nbsp; Estadia</a></li>
                     <li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="index.html#footer6-6">Localidade</a></li></ul>
                 <div class="icons-menu">
                     <a class="iconfont-wrapper" href="https://www.facebook.com/pousadaportela" target="_blank">
@@ -874,8 +923,8 @@
         <div class="row">
             <div class="col">
                 <div class="inst">
-                    <h1 class="inst__title align-center mbr-fonts-style display-2">Para promoções <br>siga-nos no instagram<br>@pousadaportela</h1>
-                    <div class="inst__content"></div>
+                    <h1 class="inst__title align-center mbr-fonts-style display-2">Para promoções e novidades <br>siga-nos no instagram<br><a href="https://www.instagram.com/pousadaportela/" target="_blank" style="color:black">@pousadaportela</a></h1>
+                    <div class="embedsocial-hashtag formato"  data-ref="a08c8cc87538896f78728dec77fc6e9410ae78f1"/>
                     
                 </div>
             </div>

@@ -1,982 +1,1045 @@
 <!DOCTYPE html>
-<html  >
+<html lang="pt-BR">
 <head>
-
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/chal.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Pousada Portela</title>
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/web/assets/gdpr-plugin/gdpr-styles.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/animatecss/animate.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/instagram-feed/style.css">
-  <link rel="stylesheet" href="assets/slick/slick.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" as="style" href="assets/estilo-css/css/mbr-additional.css">
-  <link rel="stylesheet" href="assets/estilo-css/css/mbr-additional.css" type="text/css">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pousada Sítio Portela — Chalés privativos e área de camping em Baependi, Sul de Minas Gerais. Natureza, cachoeiras e tranquilidade do campo.">
+  <title>Pousada Sítio Portela — Baependi, MG</title>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-
-  
-  <script type="text/javascript">
-    $(window).on('load',function(){
-        $('#myModal').modal('show');
-    });
-</script>
-
-
-<script > (function(d, s, id) {
-    var js;
-    if (d.getElementById(id)) {
-        return;
+    :root {
+      --laranja-escuro: #b84800;
+      --laranja: #e85d04;
+      --laranja-medio: #f48c3d;
+      --laranja-claro: #ffb347;
+      --laranja-grad: linear-gradient(135deg, #b84800 0%, #e85d04 50%, #f48c3d 100%);
+      --laranja-grad-h: linear-gradient(135deg, #e85d04 0%, #f48c3d 50%, #ffb347 100%);
+      --verde-escuro: #1e3a2f;
+      --ouro: #c9a34e;
+      --ouro-claro: #e8c97a;
+      --creme: #f9f4ee;
+      --creme-escuro: #ece5d3;
+      --texto: #1a1a18;
+      --texto-muted: #6b6457;
+      --branco: #faf9f6;
     }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://embedsocial.com/cdn/ht.js";
-    d.getElementsByTagName("head")[0].appendChild(js);
-}(document, "script", "EmbedSocialHashtagScript")); </script> 
 
-<style type="text/css">
-    .logo-cadastur{
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--branco); color: var(--texto); overflow-x: hidden; }
 
-        width: 245px;
-        height: 80px;
-   }
-  .dropdown-item {
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0 48px;
+      display: flex; align-items: flex-end; justify-content: space-between;
+      height: 200px;
+      transition: background 0.4s, backdrop-filter 0.4s, height 0.45s cubic-bezier(0.4,0,0.2,1), border-bottom 0.4s, align-items 0.3s;
+    }
+    nav.scrolled {
+      background: rgba(184,72,0,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,179,71,0.2);
+      height: 72px;
+      align-items: center;
+    }
+    .nav-logo { display: flex; align-items: flex-end; text-decoration: none; overflow: hidden; padding-bottom: 12px; }
+    nav.scrolled .nav-logo { align-items: center; padding-bottom: 0; }
+    .nav-logo img {
+      height: 12.1rem;
+      transition: height 0.45s cubic-bezier(0.4,0,0.2,1);
+    }
+    nav.scrolled .nav-logo img { height: 56px; }
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+      padding-top: 16px; /* stick links to top of nav bar */
+      align-self: flex-start;
+    }
+    nav.scrolled .nav-links { padding-top: 0; align-self: center; }
+    .nav-links a {
+      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.82); text-decoration: none; font-weight: 400;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--laranja-claro); }
+    .nav-cta {
+      background: rgba(255,255,255,0.15) !important;
+      border: 1px solid rgba(255,255,255,0.4) !important;
+      color: #fff !important; padding: 9px 22px; border-radius: 2px;
+      font-weight: 500 !important;
+    }
+    .nav-cta:hover { background: rgba(255,255,255,0.28) !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; align-self: flex-start; margin-top: 20px; }
+    nav.scrolled .nav-hamburger { align-self: center; margin-top: 0; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; }
 
-        color: #ff9966 !important;
-  }
+    /* ── HERO ── */
+    .hero {
+      position: relative; height: 100vh; min-height: 600px;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('assets/images/footer-pousada.jpg') center/cover no-repeat;
+    }
+    .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(160deg, rgba(100,30,0,0.78) 0%, rgba(60,20,0,0.55) 60%, rgba(30,15,0,0.45) 100%);
+    }
+    .hero-content { position: relative; z-index: 1; text-align: center; padding: 0 24px; max-width: 760px; }
+    .hero-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      line-height: 1;
+      opacity: 0; animation: fadeUp 0.8s 0.1s ease forwards;
+      text-shadow: 0 2px 32px rgba(0,0,0,0.5);
+    }
+    .hero-brand span {
+      display: inline-block;
+      color: #fff;
+    }
+    .hero-brand-divider {
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; margin-bottom: 18px;
+      opacity: 0; animation: fadeUp 0.8s 0.2s ease forwards;
+    }
+    .hero-brand-divider::before,
+    .hero-brand-divider::after {
+      content: ''; display: block;
+      width: 60px; height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,179,71,0.7));
+    }
+    .hero-brand-divider::after {
+      background: linear-gradient(to left, transparent, rgba(255,179,71,0.7));
+    }
+    .hero-brand-divider-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--laranja-claro); opacity: 0.8;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--laranja-claro); margin-bottom: 20px;
+      opacity: 0; animation: fadeUp 0.8s 0.3s ease forwards;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 400; line-height: 1.05;
+      color: #fff; margin-bottom: 24px;
+      opacity: 0; animation: fadeUp 0.9s 0.5s ease forwards;
+    }
+    .hero-title em { font-style: italic; color: var(--laranja-claro); }
+    .hero-sub {
+      font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.7;
+      font-weight: 300; margin-bottom: 40px; max-width: 520px; margin-left: auto; margin-right: auto;
+      opacity: 0; animation: fadeUp 0.9s 0.7s ease forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.9s 0.9s ease forwards;
+    }
+    .btn-primary {
+      padding: 14px 36px; background: var(--laranja-grad); color: #fff;
+      font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+      font-weight: 500; text-decoration: none; border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 20px rgba(232,93,4,0.4);
+    }
+    .btn-primary:hover { background: var(--laranja-grad-h); transform: translateY(-2px); box-shadow: 0 6px 28px rgba(232,93,4,0.5); }
+    .btn-outline-white {
+      padding: 14px 36px; border: 1px solid rgba(255,255,255,0.45); color: #fff;
+      font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+      font-weight: 400; text-decoration: none; border-radius: 2px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline-white:hover { border-color: var(--laranja-claro); background: rgba(255,179,71,0.12); }
+    .hero-scroll {
+      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.5); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      opacity: 0; animation: fadeIn 1s 1.4s ease forwards;
+    }
+    .hero-scroll-line {
+      width: 1px; height: 48px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
 
-.cid-sg2epAFQw3 .dropdown-item:hover, .cid-sg2epAFQw3 .dropdown-item:focus{
+    /* ── COMMON ── */
+    .section { padding: 100px 48px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--laranja); margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; color: #2a1500;
+    }
+    .section-title em { font-style: italic; color: var(--laranja); }
 
-        background: #ff9966 !important;
-        color: white !important;
+    /* ── STRIP ── */
+    .strip {
+      background: var(--laranja-grad);
+      padding: 28px 48px;
+      display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;
+    }
+    .strip-item { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.9); }
+    .strip-icon { font-size: 1.4rem; }
+    .strip-text { font-size: 0.82rem; letter-spacing: 0.04em; }
+    .strip-text strong { display: block; color: #fff; font-weight: 500; }
 
-}
+    /* ── ABOUT ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-top: 60px; }
+    .about-images { position: relative; height: 520px; }
+    .about-img-main {
+      position: absolute; top: 0; left: 0; right: 60px; bottom: 60px;
+      background: url('assets/images/pousada-portela1.jpg') center/cover no-repeat;
+      border-radius: 4px;
+    }
+    .about-img-accent {
+      position: absolute; bottom: 0; right: 0; width: 55%; height: 55%;
+      background: url('assets/images/caf-da-manh-4.jpeg') center/cover no-repeat;
+      border-radius: 4px; border: 5px solid var(--branco);
+    }
+    .about-badge {
+      position: absolute; top: 30px; right: 80px; z-index: 2;
+      background: var(--laranja-grad); color: #fff;
+      padding: 16px 20px; border-radius: 2px; text-align: center;
+      box-shadow: 0 4px 16px rgba(232,93,4,0.35);
+    }
+    .about-badge strong { display: block; font-size: 1.6rem; font-family: 'Playfair Display', serif; }
+    .about-badge span { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .about-text p { font-size: 1rem; line-height: 1.8; color: var(--texto-muted); font-weight: 300; margin-top: 20px; }
+    .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+    .about-feature {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.88rem; color: var(--texto);
+    }
+    .about-feature::before { content: ''; display: block; width: 20px; height: 1px; background: var(--laranja); flex-shrink: 0; }
 
-    
-    
-</style>  
-  
-  
+    /* ── CHALÉS ── */
+    .chales { background: var(--creme); }
+    .chales-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .chale-card {
+      background: var(--branco); border-radius: 4px; overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s; position: relative;
+    }
+    .chale-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(232,93,4,0.12); }
+    .chale-img { height: 220px; overflow: hidden; position: relative; }
+    .chale-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .chale-card:hover .chale-img img { transform: scale(1.05); }
+    .chale-tag {
+      position: absolute; top: 16px; left: 16px;
+      background: var(--laranja-grad); color: #fff;
+      font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 4px 10px; font-weight: 500;
+    }
+    .chale-info { padding: 24px; }
+    .chale-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: #2a1500; }
+    .chale-desc { font-size: 0.88rem; color: var(--texto-muted); line-height: 1.6; }
+    .chale-amenities { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+    .chale-amenity {
+      font-size: 0.72rem; letter-spacing: 0.04em; color: var(--laranja-escuro);
+      padding: 3px 10px; border: 1px solid rgba(232,93,4,0.3); border-radius: 20px;
+    }
+
+    /* ── CAMPING ── */
+    .camping {
+      background: var(--laranja-grad);
+      padding: 80px 48px;
+    }
+    .camping-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .camping-img-wrap { position: relative; border-radius: 4px; overflow: hidden; height: 380px; }
+    .camping-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .camping-img-wrap::after { content: ''; position: absolute; inset: 0; background: rgba(100,30,0,0.2); }
+    .camping-text { color: #fff; }
+    .camping-label { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 16px; }
+    .camping-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; line-height: 1.2; color: #fff; margin-bottom: 20px; }
+    .camping-title em { font-style: italic; color: var(--laranja-claro); }
+    .camping-text p { font-size: 0.98rem; line-height: 1.8; color: rgba(255,255,255,0.82); margin-bottom: 16px; }
+    .camping-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0 32px; }
+    .camping-feature {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.88rem; color: rgba(255,255,255,0.9);
+    }
+    .camping-feature::before { content: ''; display: block; width: 16px; height: 1px; background: var(--laranja-claro); flex-shrink: 0; }
+    .btn-camping {
+      display: inline-block; padding: 13px 32px;
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.5); color: #fff;
+      font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+      font-weight: 500; text-decoration: none; border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .btn-camping:hover { background: rgba(255,255,255,0.28); }
+
+    /* ── QUOTE ── */
+    .quote-section { background: #2a1500; padding: 80px 48px; text-align: center; }
+    blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem); font-style: italic;
+      color: rgba(255,255,255,0.88); line-height: 1.6;
+      max-width: 800px; margin: 0 auto;
+    }
+    blockquote cite {
+      display: block; margin-top: 24px; font-style: normal;
+      font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--laranja-claro); font-family: 'DM Sans', sans-serif;
+    }
+
+    /* ── ESTRUTURA ── */
+    .estrutura-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 60px;
+      border: 1px solid var(--creme-escuro);
+    }
+    .estrutura-item {
+      padding: 40px 28px; text-align: center;
+      border-right: 1px solid var(--creme-escuro); transition: background 0.2s;
+    }
+    .estrutura-item:last-child { border-right: none; }
+    .estrutura-item:nth-child(4) { border-right: none; }
+    .estrutura-item:nth-child(n+5) { border-top: 1px solid var(--creme-escuro); }
+    .estrutura-item:nth-child(8) { border-right: none; }
+    .estrutura-item:hover { background: var(--creme); }
+    .estrutura-icon { font-size: 2rem; margin-bottom: 16px; }
+    .estrutura-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: #2a1500; margin-bottom: 8px; }
+    .estrutura-desc { font-size: 0.82rem; color: var(--texto-muted); line-height: 1.5; }
+
+    /* ── CACHOEIRAS ── */
+    .cachoeiras { background: var(--creme); }
+    .cachoeiras-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-top: 60px; }
+    .cachoeiras-intro-text p { font-size: 1rem; line-height: 1.8; color: var(--texto-muted); margin-top: 16px; }
+    .cachoeiras-count { font-family: 'Playfair Display', serif; font-size: 5rem; background: var(--laranja-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+    .cachoeiras-count-label { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--texto-muted); }
+    .cachoeiras-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 48px; }
+    .cachoeira-card { position: relative; overflow: hidden; border-radius: 4px; }
+    .cachoeira-card:first-child, .cachoeira-card:nth-child(5) { grid-column: span 2; }
+    .cachoeira-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .cachoeira-card:first-child .cachoeira-img, .cachoeira-card:nth-child(5) .cachoeira-img { aspect-ratio: 16/9; }
+    .cachoeira-card:hover .cachoeira-img { transform: scale(1.05); }
+    .cachoeira-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 40px 16px 14px;
+      background: linear-gradient(to top, rgba(80,20,0,0.85), transparent);
+      color: #fff; font-family: 'Playfair Display', serif; font-size: 1rem; font-style: italic;
+    }
+
+    /* ── BAEPENDI ── */
+    .baependi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 60px; }
+    .baependi-images { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .baependi-img { width: 100%; object-fit: cover; border-radius: 4px; transition: transform 0.4s; }
+    .baependi-img:hover { transform: scale(1.02); }
+    .baependi-img:first-child { grid-column: span 2; aspect-ratio: 16/9; }
+    .baependi-img:not(:first-child) { aspect-ratio: 4/3; }
+    .baependi-text p { font-size: 0.95rem; line-height: 1.8; color: var(--texto-muted); margin-top: 16px; }
+    .baependi-links { margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
+    .baependi-link {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.88rem; color: #2a1500; text-decoration: none;
+      padding: 12px 16px; border: 1px solid var(--creme-escuro);
+      border-radius: 2px; transition: border-color 0.2s, background 0.2s;
+    }
+    .baependi-link:hover { border-color: var(--laranja); background: var(--creme); }
+
+    /* ── RESERVA ── */
+    .reserva { background: var(--creme); }
+    .reserva-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 60px; }
+    .reserva-options { display: flex; flex-direction: column; gap: 16px; }
+    .reserva-option {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px 28px; background: var(--branco); border-radius: 4px;
+      text-decoration: none; color: var(--texto);
+      border: 1px solid var(--creme-escuro);
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .reserva-option:hover { border-color: var(--laranja); box-shadow: 0 8px 24px rgba(232,93,4,0.1); transform: translateX(4px); }
+    .reserva-option-info { display: flex; align-items: center; gap: 16px; }
+    .reserva-option-icon { font-size: 1.6rem; }
+    .reserva-option-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; }
+    .reserva-option-sub { font-size: 0.78rem; color: var(--texto-muted); }
+    .reserva-arrow { font-size: 1.2rem; color: var(--laranja); }
+    .reserva-whatsapp { background: var(--laranja-grad); padding: 36px; border-radius: 4px; color: #fff; box-shadow: 0 8px 32px rgba(232,93,4,0.3); }
+    .reserva-whatsapp h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 12px; }
+    .reserva-whatsapp p { font-size: 0.88rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 24px; }
+    .btn-whatsapp {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 28px; background: #25d366; color: #fff;
+      font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500;
+      text-decoration: none; border-radius: 2px; width: fit-content;
+      transition: background 0.2s;
+    }
+    .btn-whatsapp:hover { background: #1db954; }
+
+    /* ── GALERIA SLIDER ── */
+    .galeria { overflow: hidden; padding: 80px 0; }
+    .galeria-head { padding: 0 0 40px; max-width: 1200px; margin: 0 auto; padding-left: 48px; }
+    .galeria-track { display: flex; gap: 16px; animation: scrollTrack 40s linear infinite; width: max-content; }
+    .galeria-track:hover { animation-play-state: paused; }
+    .galeria-frame { width: 300px; height: 200px; flex-shrink: 0; overflow: hidden; border-radius: 4px; }
+    .galeria-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* ── AVALIAÇÕES ── */
+    .avaliacoes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .avaliacao-card {
+      background: var(--creme); padding: 28px; border-radius: 4px;
+      border-left: 3px solid var(--laranja);
+    }
+    .avaliacao-stars { color: var(--laranja); font-size: 0.85rem; margin-bottom: 14px; }
+    .avaliacao-text { font-size: 0.9rem; line-height: 1.7; color: var(--texto-muted); font-style: italic; }
+    .avaliacao-autor { margin-top: 16px; font-size: 0.78rem; color: #2a1500; font-weight: 500; letter-spacing: 0.04em; }
+
+    /* ── INSTAGRAM ── */
+    .instagram { background: var(--laranja-grad); padding: 60px 48px; text-align: center; }
+    .instagram h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #fff; margin-bottom: 8px; }
+    .instagram p { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 24px; }
+    .instagram-handle {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 1rem; color: #fff; text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.45); padding-bottom: 2px;
+    }
+    .instagram-handle:hover { border-color: #fff; }
+
+    /* ── FOOTER ── */
+    footer { background: #1a0a00; padding: 72px 48px 40px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: 60px; max-width: 1200px; margin: 0 auto; }
+    .footer-brand .logo { display: block; margin-bottom: 16px; }
+    .footer-brand .logo img { height: 44px; }
+    .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.42); line-height: 1.7; }
+    .footer-brand .socials { display: flex; gap: 12px; margin-top: 24px; }
+    .footer-brand .socials a {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.6); text-decoration: none;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .footer-brand .socials a:hover { border-color: var(--laranja); color: var(--laranja-claro); background: rgba(232,93,4,0.1); }
+    .footer-brand .socials a svg { width: 18px; height: 18px; fill: currentColor; }
+    .footer-col h4 { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--laranja-medio); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 0.85rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: rgba(255,255,255,0.9); }
+    .footer-address { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.8; }
+    .footer-address strong { color: rgba(255,255,255,0.72); font-weight: 500; display: block; margin-bottom: 6px; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .footer-map { margin-top: 20px; border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+    .footer-map iframe { display: block; width: 100%; height: 180px; filter: grayscale(40%) brightness(0.7); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin-top: 56px; padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 1200px; margin-left: auto; margin-right: auto;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom-left { display: flex; flex-direction: column; gap: 4px; }
+    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.28); }
+    .footer-bottom .cadastur { display: flex; align-items: center; gap: 10px; }
+    .footer-bottom .cadastur img { height: 28px; opacity: 0.55; filter: brightness(1.5); }
+    .footer-bottom .cadastur a { font-size: 0.72rem; color: rgba(255,255,255,0.32); text-decoration: none; }
+    .footer-bottom .cadastur a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ── WHATSAPP FLOAT ── */
+    .whatsapp-float {
+      position: fixed; bottom: 32px; right: 32px; z-index: 999;
+      width: 60px; height: 60px;
+      background: #25d366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+    .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes scrollLine { 0%, 100% { transform: scaleY(1); opacity: 1; } 50% { transform: scaleY(0.6); opacity: 0.4; } }
+    @keyframes scrollTrack { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .section { padding: 72px 24px; }
+      nav { padding: 0 24px; height: 160px; align-items: flex-end; }
+      nav.scrolled { height: 64px; align-items: center; }
+      .nav-logo { padding-bottom: 10px; }
+      nav.scrolled .nav-logo { padding-bottom: 0; }
+      .nav-logo img { height: 9rem; }
+      nav.scrolled .nav-logo img { height: 48px; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; left: 0; right: 0;
+        background: rgba(184,72,0,0.98);
+        backdrop-filter: blur(12px);
+        padding: 20px 24px 28px;
+        gap: 4px; z-index: 998;
+        border-top: 1px solid rgba(255,179,71,0.25);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+        animation: slideDown 0.25s ease;
+      }
+      .nav-links.open a {
+        font-size: 0.95rem; padding: 13px 16px; border-radius: 4px;
+        letter-spacing: 0.1em; transition: background 0.15s;
+        align-self: auto; padding-top: 13px;
+      }
+      .nav-links.open a:hover { background: rgba(255,255,255,0.12); }
+      .nav-links.open .nav-cta { margin-top: 8px; text-align: center; background: rgba(255,255,255,0.15) !important; }
+      .nav-hamburger { display: flex; align-self: flex-start; margin-top: 20px; }
+      nav.scrolled .nav-hamburger { align-self: center; margin-top: 0; }
+      .about-grid, .cachoeiras-intro, .baependi-grid, .reserva-content, .camping-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-images { height: 320px; }
+      .estrutura-grid { grid-template-columns: 1fr 1fr; }
+      .chales-grid { grid-template-columns: 1fr 1fr; }
+      .cachoeiras-grid { grid-template-columns: 1fr 1fr; }
+      .cachoeira-card:first-child, .cachoeira-card:nth-child(5) { grid-column: span 2; }
+      .avaliacoes-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .strip { gap: 28px; }
+      .camping { padding: 72px 24px; }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      .chales-grid, .footer-grid { grid-template-columns: 1fr; }
+      .cachoeiras-grid { grid-template-columns: 1fr; }
+      .cachoeira-card:first-child, .cachoeira-card:nth-child(5) { grid-column: span 1; }
+      .baependi-images { grid-template-columns: 1fr; }
+      .baependi-img:first-child { grid-column: span 1; }
+      .hero-title { font-size: 2.4rem; }
+    }
+  </style>
 </head>
 <body>
 
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo">
+    <img src="assets/images/logotipo-pousadaportela-prod.png" alt="Pousada Portela">
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="#chales">Chalés</a>
+    <a href="#camping">Camping</a>
+    <a href="#estrutura">Estrutura</a>
+    <a href="#cachoeiras">Cachoeiras</a>
+    <a href="#baependi">Baependi</a>
+    <a href="https://wa.me/5535992219203?text=Gostaria de reservar um chalé" target="_blank" class="nav-cta">Reservar</a>
+  </div>
+  <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
 
-  
-  <section class="menu menu3 cid-sg2epAFQw3" once="menu" id="menu3-0">
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-brand"><span>Pousada Portela</span></div>
+    <div class="hero-brand-divider"><div class="hero-brand-divider-dot"></div></div>
+    <p class="hero-eyebrow">Baependi · Sul de Minas Gerais</p>
+    <h1 class="hero-title">Onde o campo<br>abraça <em>a alma</em></h1>
+    <p class="hero-sub">Chalés privativos e área de camping rodeados de cachoeiras, natureza e a hospitalidade genuína do jeito mineiro de receber.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/5535992219203?text=Gostaria de reservar um chalé" target="_blank" class="btn-primary">Faça sua Reserva</a>
+      <a href="#chales" class="btn-outline-white">Ver os Chalés</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Role</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
 
-<!--Botão Whatsapp dentro de todas as páginas--> 
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item">
+    <span class="strip-icon">🏡</span>
+    <div class="strip-text"><strong>Chalés Privativos</strong>Espaço exclusivo para você</div>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">⛺</span>
+    <div class="strip-text"><strong>Área de Camping</strong>Natureza e aventura</div>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">💦</span>
+    <div class="strip-text"><strong>+15 Cachoeiras</strong>A minutos da pousada</div>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">🏊</span>
+    <div class="strip-text"><strong>Piscina</strong>Para relaxar em família</div>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">📶</span>
+    <div class="strip-text"><strong>Wi-Fi Gratuito</strong>Em toda a propriedade</div>
+  </div>
+</div>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://wa.me/553592243818?text=Gostaria de reservar um chalé"
-   style="position:fixed;
-          width:90px;
-		  height:90px;
-		  bottom:50px;
-		  right:60px;
-		  background-color:#25d366;
-		  color:#FFF;
-		  border-radius:50px;
-		  text-align:center;
-		  font-size:63px;
-		  box-shadow: 3px 1px 2px #888;
-          z-index:1000;"
-		 target="_blank">
-<i style="margin-top:16px" class="fa fa-whatsapp"></i>
+<!-- SOBRE -->
+<section class="section" id="sobre">
+  <div class="section-inner">
+    <div class="about-grid reveal">
+      <div class="about-images">
+        <div class="about-img-main"></div>
+        <div class="about-img-accent"></div>
+        <div class="about-badge">
+          <strong>★ 4.9</strong>
+          <span>Google Reviews</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-label">Nossa história</p>
+        <h2 class="section-title">Hospitalidade com <em>alma mineira</em></h2>
+        <p>Localizada em Baependi, no Sul de Minas Gerais, a Pousada Sítio Portela oferece uma experiência autêntica de descanso e conexão com a natureza. Nossa propriedade foi construída com o cuidado de quem ama receber bem.</p>
+        <p>Próxima do centro da cidade e rodeada por mais de 15 cachoeiras, trilhas e vegetação nativa, a pousada é o ponto de partida perfeito para explorar a riqueza natural da região — ou simplesmente descansar.</p>
+        <div class="about-features">
+          <div class="about-feature">Chalés privativos</div>
+          <div class="about-feature">Área de camping</div>
+          <div class="about-feature">Para solteiros, casais e grupos</div>
+          <div class="about-feature">Redes para descanso</div>
+          <div class="about-feature">Tranquilidade do campo</div>
+          <div class="about-feature">Próximo ao centro</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHALÉS -->
+<section class="section chales" id="chales">
+  <div class="section-inner">
+    <p class="section-label reveal">Acomodações</p>
+    <h2 class="section-title reveal">Nossos <em>Chalés</em></h2>
+    <div class="chales-grid">
+      <div class="chale-card reveal">
+        <div class="chale-img">
+          <img src="assets/images/chale-5.jpg" alt="Chalé do Campo">
+          <span class="chale-tag">Destaque</span>
+        </div>
+        <div class="chale-info">
+          <h3 class="chale-name">Chalé do Campo</h3>
+          <p class="chale-desc">Charmoso e aconchegante, com vista para a natureza e ambiente perfeito para relaxar em casal ou família.</p>
+          <div class="chale-amenities">
+            <span class="chale-amenity">📶 Wi-Fi</span>
+            <span class="chale-amenity">🌀 Ventilador de teto</span>
+            <span class="chale-amenity">🚿 Chuveiro</span>
+            <span class="chale-amenity">🧊 Frigobar</span>
+          </div>
+        </div>
+      </div>
+      <div class="chale-card reveal">
+        <div class="chale-img">
+          <img src="assets/images/chale-6.jpg" alt="Chalé da Serra">
+        </div>
+        <div class="chale-info">
+          <h3 class="chale-name">Chalé da Serra</h3>
+          <p class="chale-desc">Espaço amplo com varanda, ideal para grupos que buscam privacidade e contato direto com a natureza mineira.</p>
+          <div class="chale-amenities">
+            <span class="chale-amenity">📶 Wi-Fi</span>
+            <span class="chale-amenity">🌀 Ventilador de teto</span>
+            <span class="chale-amenity">🚿 Chuveiro</span>
+            <span class="chale-amenity">🧊 Frigobar</span>
+          </div>
+        </div>
+      </div>
+      <div class="chale-card reveal">
+        <div class="chale-img">
+          <img src="assets/images/quarto-6.jpg" alt="Suíte do Vale">
+          <span class="chale-tag">Casal</span>
+        </div>
+        <div class="chale-info">
+          <h3 class="chale-name">Suíte do Vale</h3>
+          <p class="chale-desc">Perfeito para casais, com ambiente romântico, cama confortável e toda a tranquilidade que você merece.</p>
+          <div class="chale-amenities">
+            <span class="chale-amenity">📶 Wi-Fi</span>
+            <span class="chale-amenity">🌀 Ventilador de teto</span>
+            <span class="chale-amenity">🚿 Chuveiro</span>
+            <span class="chale-amenity">🧊 Frigobar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:48px;" class="reveal">
+      <a href="https://wa.me/5535992219203?text=Gostaria de verificar disponibilidade e reservar um chalé" target="_blank" class="btn-primary">Verificar Disponibilidade</a>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPING -->
+<section class="camping" id="camping">
+  <div class="camping-inner">
+    <div class="camping-img-wrap reveal">
+      <img src="assets/images/camping-area.jpeg" alt="Área de Camping Pousada Portela">
+    </div>
+    <div class="camping-text reveal">
+      <p class="camping-label">Nova experiência</p>
+      <h2 class="camping-title">Área de <em>Camping</em></h2>
+      <p>Para quem quer se aproximar ainda mais da natureza, a Pousada Portela oferece uma área de camping exclusiva, rodeada de verde e com toda a infraestrutura que você precisa para dormir sob as estrelas.</p>
+      <p>Sinta a brisa da serra, ouça os sons da mata e acorde com o canto dos pássaros em Baependi.</p>
+      <div class="camping-features">
+        <div class="camping-feature">Área arborizada</div>
+        <div class="camping-feature">Banheiros e duchas</div>
+        <div class="camping-feature">Tomadas para carregamento</div>
+        <div class="camping-feature">Wi-Fi na área</div>
+        <div class="camping-feature">Piscina disponível</div>
+        <div class="camping-feature">Estacionamento</div>
+      </div>
+      <a href="https://wa.me/5535992219203?text=Gostaria de informações sobre a área de camping" target="_blank" class="btn-camping">Perguntar sobre o Camping</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-section reveal">
+  <blockquote>
+    "A gente sempre deve sair à rua como quem foge de casa, como se estivessem abertos diante de nós todos os caminhos do mundo."
+    <cite>— Mário Quintana</cite>
+  </blockquote>
+</div>
+
+<!-- ESTRUTURA -->
+<section class="section" id="estrutura">
+  <div class="section-inner">
+    <p class="section-label reveal">O que oferecemos</p>
+    <h2 class="section-title reveal">Estrutura completa para<br><em>a sua estadia</em></h2>
+    <div class="estrutura-grid reveal">
+      <div class="estrutura-item">
+        <div class="estrutura-icon">🏊</div>
+        <h3 class="estrutura-title">Piscina</h3>
+        <p class="estrutura-desc">Mergulhe e relaxe com vista para a natureza</p>
+      </div>
+      <div class="estrutura-item">
+        <div class="estrutura-icon">🌿</div>
+        <div class="estrutura-title">Redes & Jardim</div>
+        <p class="estrutura-desc">Áreas ao ar livre para descanso e contemplação</p>
+      </div>
+      <div class="estrutura-item">
+        <div class="estrutura-icon">⛺</div>
+        <div class="estrutura-title">Área de Camping</div>
+        <p class="estrutura-desc">Dorme sob as estrelas com toda a estrutura</p>
+      </div>
+      <div class="estrutura-item">
+        <div class="estrutura-icon">🅿️</div>
+        <div class="estrutura-title">Estacionamento</div>
+        <p class="estrutura-desc">Seguro, gratuito e amplo para todos os hóspedes</p>
+      </div>
+      <div class="estrutura-item">
+        <div class="estrutura-icon">📶</div>
+        <div class="estrutura-title">Wi-Fi Gratuito</div>
+        <p class="estrutura-desc">Internet de qualidade em toda a propriedade</p>
+      </div>
+      <div class="estrutura-item">
+        <div class="estrutura-icon">💳</div>
+        <div class="estrutura-title">Formas de Pagamento</div>
+        <p class="estrutura-desc">Aceitamos PIX e cartões de crédito/débito</p>
+      </div>
+      <div class="estrutura-item">
+        <div class="estrutura-icon">🥞</div>
+        <div class="estrutura-title">Café da Manhã</div>
+        <p class="estrutura-desc">Incluso em estadias acima de 3 diárias*</p>
+      </div>
+      <div class="estrutura-item">
+        <div class="estrutura-icon">🗺️</div>
+        <div class="estrutura-title">Guia de Trilhas</div>
+        <p class="estrutura-desc">Indicações de cachoeiras e trilhas da região</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA SLIDER -->
+<div class="galeria">
+  <div class="galeria-head reveal">
+    <p class="section-label">Galeria</p>
+    <h2 class="section-title">Momentos da <em>Pousada</em></h2>
+  </div>
+  <div style="overflow:hidden;">
+    <div class="galeria-track">
+      <div class="galeria-frame"><img src="assets/images/pousada-portela2.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela3.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela4.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/chal3.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/chale-2.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/chale-10.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/chale-11.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/pscina.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/redes.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/caf-da-manh-2.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela2.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela3.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela4.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/chal3.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/chale-2.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/chale-10.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/chale-11.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/pscina.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/redes.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/caf-da-manh-2.jpg" alt=""></div>
+    </div>
+  </div>
+</div>
+
+<!-- CACHOEIRAS -->
+<section class="section cachoeiras" id="cachoeiras">
+  <div class="section-inner">
+    <div class="cachoeiras-intro reveal">
+      <div class="cachoeiras-intro-text">
+        <p class="section-label">Natureza em volta</p>
+        <h2 class="section-title">Cachoeiras para<br><em>explorar</em></h2>
+        <p>A região de Baependi é um paraíso para quem ama natureza. Ao redor da pousada você encontrará dezenas de cachoeiras acessíveis, cada uma com uma beleza única — do Caldeirão às Esmeraldas.</p>
+      </div>
+      <div style="text-align:center;">
+        <div class="cachoeiras-count">15+</div>
+        <div class="cachoeiras-count-label">cachoeiras a minutos<br>da pousada</div>
+      </div>
+    </div>
+    <div class="cachoeiras-grid reveal">
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/chachoeira-bae.jpg" alt="Juju"><div class="cachoeira-label">Cachoeira Juju</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/cachu4.jpg" alt="Honorato Ferreira"><div class="cachoeira-label">Honorato Ferreira</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/das-esmeraldas.jpeg" alt="Esmeralda"><div class="cachoeira-label">Esmeralda</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/cachu3.jpg" alt="Charco"><div class="cachoeira-label">Charco</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/caldeiro.jpeg" alt="Caldeirão"><div class="cachoeira-label">Caldeirão</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/itauna.jpeg" alt="Itaúna"><div class="cachoeira-label">Itaúna</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/coimbra.jpeg" alt="Coimbra"><div class="cachoeira-label">Coimbra</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/5.jpg" alt="Pôr do Sol no Juju"><div class="cachoeira-label">Pôr do Sol no Juju</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BAEPENDI -->
+<section class="section" id="baependi">
+  <div class="section-inner">
+    <div class="baependi-grid reveal">
+      <div class="baependi-images">
+        <img class="baependi-img" src="assets/images/praa-de-baependi.jpeg" alt="Praça de Baependi">
+        <img class="baependi-img" src="assets/images/brasilia.jpeg" alt="Baependi">
+        <img class="baependi-img" src="assets/images/baepedndi.jpg" alt="Baependi cidade">
+      </div>
+      <div>
+        <p class="section-label">Conheça a cidade</p>
+        <h2 class="section-title">Um cadin de <em>Baependi</em></h2>
+        <p style="font-size:1rem; line-height:1.8; color:var(--texto-muted); margin-top:16px;">Baependi é uma charmosa cidade histórica do Sul de Minas, com praças coloniais, igrejas centenárias e uma cultura de hospitalidade que você só encontra na terra mineira. Próxima de circuitos ecológicos e com infraestrutura completa para o visitante.</p>
+        <div class="baependi-links">
+          <a href="http://www.baependi.mg.gov.br/site/" target="_blank" class="baependi-link">
+            <span>🏛️</span>
+            <div><div style="font-weight:500;">Prefeitura de Baependi</div><div style="font-size:0.75rem; color:var(--texto-muted);">Site oficial da cidade</div></div>
+            <span style="margin-left:auto; color:var(--laranja);">→</span>
+          </a>
+          <a href="politica_hospedagem2.html" target="_blank" class="baependi-link">
+            <span>📋</span>
+            <div><div style="font-weight:500;">Política de Hospedagem</div><div style="font-size:0.75rem; color:var(--texto-muted);">Regras e informações</div></div>
+            <span style="margin-left:auto; color:var(--laranja);">→</span>
+          </a>
+          <a href="https://www.google.com/travel/hotels/entity/CgoIxIn2ppH3k5V-EAE/reviews" target="_blank" class="baependi-link">
+            <span>⭐</span>
+            <div><div style="font-weight:500;">Avaliações no Google</div><div style="font-size:0.75rem; color:var(--texto-muted);">Veja o que dizem nossos hóspedes</div></div>
+            <span style="margin-left:auto; color:var(--laranja);">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section class="section" style="background:var(--creme);">
+  <div class="section-inner">
+    <p class="section-label reveal">O que dizem</p>
+    <h2 class="section-title reveal">Avaliações dos <em>Hóspedes</em></h2>
+    <div class="avaliacoes-grid">
+      <div class="avaliacao-card reveal">
+        <div class="avaliacao-stars">★★★★★</div>
+        <p class="avaliacao-text">"Lugar maravilhoso! A tranquilidade do campo, os chalés muito bem cuidados e o pessoal super atencioso. Voltaremos com certeza!"</p>
+        <p class="avaliacao-autor">— Hóspede via Google</p>
+      </div>
+      <div class="avaliacao-card reveal">
+        <div class="avaliacao-stars">★★★★★</div>
+        <p class="avaliacao-text">"Experiência incrível. As cachoeiras perto são lindíssimas e a pousada é o refúgio perfeito após um dia de trilhas. Recomendo muito!"</p>
+        <p class="avaliacao-autor">— Hóspede via Booking</p>
+      </div>
+      <div class="avaliacao-card reveal">
+        <div class="avaliacao-stars">★★★★★</div>
+        <p class="avaliacao-text">"Atendimento impecável, chalés limpos e confortáveis. A sensação de paz que encontramos na Portela não tem preço. Perfeito para o fim de semana."</p>
+        <p class="avaliacao-autor">— Hóspede via Booking</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVA -->
+<section class="section reserva" id="reserva">
+  <div class="section-inner">
+    <p class="section-label reveal">Pronto para vir?</p>
+    <h2 class="section-title reveal">Faça sua <em>Reserva</em></h2>
+    <div class="reserva-content reveal">
+      <div class="reserva-options">
+        <a href="https://www.booking.com/hotel/br/pousada-portela-chales.pt-br.html?aid=360920&label=New_Portuguese_PT_ROW_6409090206-_9oPl604g33uUPimd0_L7QS60966725526%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg&sid=86e65c93b3505960dfe6cd96a9127d27&dest_id=-626896&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity" target="_blank" class="reserva-option">
+          <div class="reserva-option-info">
+            <span class="reserva-option-icon">🏨</span>
+            <div>
+              <div class="reserva-option-name">Booking.com</div>
+              <div class="reserva-option-sub">Reserve com segurança pelo Booking</div>
+            </div>
+          </div>
+          <span class="reserva-arrow">→</span>
+        </a>
+        <a href="https://www.google.com/travel/hotels/entity/CgoIxIn2ppH3k5V-EAE/reviews" target="_blank" class="reserva-option">
+          <div class="reserva-option-info">
+            <span class="reserva-option-icon">⭐</span>
+            <div>
+              <div class="reserva-option-name">Avaliações no Google</div>
+              <div class="reserva-option-sub">Veja o que dizem os hóspedes</div>
+            </div>
+          </div>
+          <span class="reserva-arrow">→</span>
+        </a>
+        <a href="politica_hospedagem2.html" target="_blank" class="reserva-option">
+          <div class="reserva-option-info">
+            <span class="reserva-option-icon">📋</span>
+            <div>
+              <div class="reserva-option-name">Política de Hospedagem</div>
+              <div class="reserva-option-sub">Confira as regras e informações</div>
+            </div>
+          </div>
+          <span class="reserva-arrow">→</span>
+        </a>
+      </div>
+      <div class="reserva-whatsapp">
+        <h3>Prefere falar diretamente?</h3>
+        <p>Mande uma mensagem no WhatsApp e teremos prazer em responder todas as suas dúvidas, verificar disponibilidade e ajudar com sua reserva diretamente.</p>
+        <a href="https://wa.me/5535992219203?text=Gostaria de reservar um chalé" target="_blank" class="btn-whatsapp">
+          <svg style="width:20px;height:20px;fill:#fff;flex-shrink:0;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chamar no WhatsApp
+        </a>
+        <div style="margin-top:24px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.18);">
+          <div style="font-size:0.78rem; color:rgba(255,255,255,0.6); margin-bottom:8px;">📍 Endereço</div>
+          <div style="font-size:0.85rem; color:rgba(255,255,255,0.88); line-height:1.6;">
+            Travessa Hugo Martins Pompeu, 95<br>Baependi — MG
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<div class="instagram">
+  <h2>Siga a Pousada no Instagram</h2>
+  <p>Novidades, promoções e os melhores momentos da vida no campo</p>
+  <a href="https://www.instagram.com/pousadaportela/" target="_blank" class="instagram-handle">
+    📷 @pousadaportela
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo"><img src="assets/images/logotipo-pousadaportela-prod.png" alt="Pousada Portela"></a>
+      <p>Chalés privativos e área de camping em Baependi, Sul de Minas Gerais. Natureza, tranquilidade e hospitalidade mineira.</p>
+      <div class="socials">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/pousadaportela" target="_blank" title="Facebook" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/pousadaportela/" target="_blank" title="Instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/></svg>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5535992219203?text=Gostaria de reservar um chalé" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#chales">Chalés</a></li>
+        <li><a href="#camping">Camping</a></li>
+        <li><a href="#estrutura">Estrutura</a></li>
+        <li><a href="#cachoeiras">Cachoeiras</a></li>
+        <li><a href="#baependi">Baependi</a></li>
+        <li><a href="#reserva">Reservar</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Links Úteis</h4>
+      <ul>
+        <li><a href="politica_hospedagem2.html" target="_blank">Política de Hospedagem</a></li>
+        <li><a href="https://www.booking.com/hotel/br/pousada-portela-chales.pt-br.html" target="_blank">Booking.com</a></li>
+        <li><a href="http://www.baependi.mg.gov.br/site/" target="_blank">Prefeitura de Baependi</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-address">
+        <strong>Endereço</strong>
+        Travessa Hugo Martins Pompeu, 95<br>
+        Baependi — MG<br><br>
+        <a href="https://wa.me/5535992219203" style="color:rgba(255,255,255,0.55); text-decoration:none;">📱 (35) 99221-9203</a>
+      </div>
+      <div class="footer-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.3981617557!2d-44.8838422855847!3d-21.957373310200456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9e25b902e8caaf%3A0x7e2a4fb914dd84c4!2sPousada%20Portela%20Chal%C3%A9s!5e1!3m2!1spt-BR!2sbr!4v1632334530047!5m2!1spt-BR!2sbr" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <p>© 2025 Pousada Sítio Portela · Todos os direitos reservados · Ayslan Portela</p>
+      <p>CNPJ: 35.591.944/0001-65</p>
+    </div>
+    <div class="cadastur">
+      <a href="assets/images/Cadastur.jpg" target="_blank">
+        <img src="assets/images/Cadastur-logo.png" alt="Certificado Cadastur">
+      </a>
+      <a href="assets/images/Cadastur.jpg" target="_blank">Ver certificado Cadastur</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5535992219203?text=Gostaria de reservar um chalé" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
-		
-    
-    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="container-fluid">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="https://www.pousadaportela.com.br">
-                        <img src="assets/images/chal.png" alt="Pousada Portela" style="height: 5.1rem;">
-                    </a>
-                </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-danger text-primary display-4" href="https://www.pousadaportela.com.br">Pousada Sitio Portela</a></span>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
 
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                  
+  function toggleMenu() {
+    const links = document.getElementById('nav-links');
+    links.classList.toggle('open');
+    if (links.classList.contains('open')) {
+      const navH = document.getElementById('main-nav').offsetHeight;
+      links.style.top = navH + 'px';
+    }
+  }
+  document.querySelectorAll('#nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('nav-links').classList.remove('open'));
+  });
 
-                    
-            <div class="dropdown">
-                <li class="nav-item nav-link link text-danger display-4 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Faça sua Reserva 
-                </li>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <!-- Link para o Airbnb-->
-                        <a class="dropdown-item" href="https://www.airbnb.com.br/rooms/51152588?guests=1&adults=1&s=67&unique_share_id=2a56042d-e3a0-4be4-a9f0-fbc2331227fc" target="_blank">Airbnb</a>
-
-
-                        <!-- Link para o Booking-->
-                        <a class="dropdown-item" href="http://www.booking.com/Share-Hut006" target="_blank">Booking</a>
-                    </div>
-            </div>
-
-
-
-
-
-                    <li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="index.html#slider2-n" target="_blank">&nbsp; &nbsp; Fotos</a></li><li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="index.html#content9-p" target="_blank">&nbsp; &nbsp; Estadia</a></li>
-                    <li class="nav-item"><a class="nav-link link text-danger text-primary display-4" href="index.html#footer6-6">Localidade</a></li></ul>
-                <div class="icons-menu">
-                    <a class="iconfont-wrapper" href="https://www.facebook.com/pousadaportela" target="_blank">
-                        <span class="p-2 mbr-iconfont socicon-facebook socicon" style="color: rgb(68, 121, 217); fill: rgb(68, 121, 217);"></span>
-                    </a>
-                    <a class="iconfont-wrapper" href="https://wa.me/553592243818?text=Gostaria de reservar um chalé" target="_blank" >
-                        <span class="p-2 mbr-iconfont socicon-whatsapp socicon" style="color: rgb(161, 232, 152); fill: rgb(161, 232, 152);"></span>
-                    </a>
-                    <a class="iconfont-wrapper" href="https://www.instagram.com/pousadaportela/" target="_blank">
-                        <span class="p-2 mbr-iconfont socicon-instagram socicon" style="color: rgb(228, 63, 63); fill: rgb(228, 63, 63);"></span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-    </nav>
-</section>
-
-<section class="header6 cid-sg2xjlUJQi mbr-fullscreen" id="header6-5">
-
-    
-
-    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);"></div>
-
-    <div class="align-center container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-1"><strong>Venha nos visitar UAI !!!</strong></h1>
-                
-                <p class="mbr-text mbr-white mbr-fonts-style display-7">
-                    Localizada em Baependi Sul de Minas Gerais, nossa Pousada conta a receptividade do&nbsp;<br>jeito mineiro de ser, tranquilidade, próximo do centro da cidade,rodeada de cachoeiras, muitas trilhas e natureza<br>Seja muito Bem-Vindo(a)</p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-danger display-4" href="index.html#gallery3-3">Veja nossos chalés</a></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="gallery3 cid-sg2lJsmG6g" id="gallery3-3">
-    
-    <div class="mbr-overlay"></div>
-    <div class="container-fluid">
-        <div class="mbr-section-head">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-1"><strong>Nossas instalações sô&nbsp;</strong></h4>
-            
-        </div>
-        <div class="row mt-4">
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/chal.jpg" alt="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"><strong>&nbsp;</strong></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/chal-4.jpg" alt="" title="" data-slide-to="1">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/chale-11.jpg" alt="" title="" data-slide-to="1">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/chale-5.jpg" alt="" title="" data-slide-to="1">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/chale-2.jpg" alt="" title="" data-slide-to="2">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/chal3.jpg" alt="" title="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/pousada-portela1.jpg" alt="" title="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/chale-6.jpg" alt="" title="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="gallery5 mbr-gallery cid-sg2uHoWYme" id="gallery5-4">
-    
-
-    
-
-    <div class="container">
-        <div class="mbr-section-head">
-            <h3 class="mbr-section-title mbr-fonts-style align-center m-0 display-2"><strong>Espiá Só...</strong></h3>
-            
-        </div>
-        <div class="row mbr-gallery mt-4">
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/chale-5.jpg" alt="" data-slide-to="0" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/chale-6.jpg" alt="" data-slide-to="1" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/caf-da-manh-4.jpeg" alt="" data-slide-to="2" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/quarto-6.jpg" alt="" data-slide-to="3" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/pscina.jpg" alt="" data-slide-to="4" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/redes.jpg" alt="" data-slide-to="5" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/chale-10.jpg" alt="" data-slide-to="6" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/chale-11.jpg" alt="" data-slide-to="7" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/baependi-mapa.jpg" alt="" data-slide-to="8" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/pousada-portela3.jpg" alt="" data-slide-to="9" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/pousada-portela2.jpg" alt="" data-slide-to="10" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/221238431.jpg" alt="" data-slide-to="11" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/221238512.jpg" alt="" data-slide-to="12" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/270592755.jpg" alt="" data-slide-to="13" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/footer-pousada.jpg" alt="" data-slide-to="14" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-target="#sgdT8TSKX6-modal">
-                    <img class="w-100" src="assets/images/pousada-portela4.jpg" alt="" data-slide-to="15" data-target="#lb-sgdT8TSKX6">
-                    <div class="icon-wrapper">
-                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
-        <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="sgdT8TSKX6-modal">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="carousel slide carousel-fade" id="lb-sgdT8TSKX6" data-interval="5000">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="assets/images/chale-5.jpg" alt="">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/chale-6.jpg" alt="">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/caf-da-manh-4.jpeg" alt="">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/quarto-6.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/pscina.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/redes.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/chale-10.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/chale-11.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/baependi-mapa.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/pousada-portela3.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/pousada-portela2.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/221238431.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/221238512.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/270592755.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/footer-pousada.jpg" alt="">
-                                </div><div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/pousada-portela4.jpg" alt="">
-                                </div>
-                            </div>
-                            <ol class="carousel-indicators">
-                                <li data-slide-to="0" class="active" data-target="#lb-sgdT8TSKX6"></li>
-                                <li data-slide-to="1" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="2" data-target="#lb-sgdT8TSKX6"></li>
-                                <li data-slide-to="3" data-target="#lb-sgdT8TSKX6"></li>
-                                <li data-slide-to="4" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="5" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="6" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="7" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="8" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="9" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="10" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="11" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="12" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="13" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="14" data-target="#lb-sgdT8TSKX6"></li><li data-slide-to="15" data-target="#lb-sgdT8TSKX6"></li>
-                            </ol>
-                            <a role="button" href="" class="close" data-dismiss="modal" aria-label="Close">
-                            </a>
-                            <a class="carousel-control-prev carousel-control" role="button" data-slide="prev" href="#lb-sgdT8TSKX6">
-                                <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next carousel-control" role="button" data-slide="next" href="#lb-sgdT8TSKX6">
-                                <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="content9 cid-sg9lOhNGnZ" id="content9-p">
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-		
-            <div class="counter-container col-md-6 col-lg-5">
-		
-                <h4 class="mbr-section-title mbr-fonts-style mb-4 display-5">O que disponibilizamos na sua estadia</h4>
-			
-                <div class="mbr-text mbr-fonts-style display-7">
-                    <ol>
-                        <li><strong>Chalés privativos</strong></li>
-                        <li><strong>Tranquilidade do campo</strong></li>
-                        <!-- <li><strong>Café da Manhã incluso em estadias acima de 3 diárias</strong></li> -->
-                        <li><strong>Acomodação para Solteiros, Casais e Grupos*</strong></li><li><strong>Estacionamento e Wi-fi gratuitos</strong></li><li><strong>Próximo de mais de 15 cachoeiras</strong></li><li><strong>Piscina*</strong></li><li><strong>Redes para descanso</strong></li><li><strong>Bar</strong></li><li><strong>Veja nossas avaliações no <a href="https://www.google.com/travel/hotels/entity/CgoIxIn2ppH3k5V-EAE/reviews?g2lb=2502548%2C4258168%2C4270442%2C4306835%2C4308226%2C4317915%2C4328159%2C4371334%2C4419364%2C4428793%2C4433754%2C4447566%2C4456076%2C4464074%2C4270859%2C4284970%2C4291517%2C4412693&hl=pt-PT&gl=br&un=1&rp=EMSJ9qaR95OVfjgCQABIAcABAg&ictx=1&sa=X&ved=0CAAQ5JsGahcKEwjIiImFyP3sAhUAAAAAHQAAAAAQAw&utm_campaign=sharing&utm_medium=link&utm_source=htls&hrf=IgNCUkwqFgoHCOQPEAsYDBIHCOQPEAsYDRgBKACCASMweDllMjViOTAyZThjYWFmOjB4N2UyYTRmYjkxNGRkODRjNJoBJRojMHg5ZTI1YjkwMmU4Y2FhZjoweDdlMmE0ZmI5MTRkZDg0YzQ" class="text-primary" target="_blank">Google </a>e<a href="http://www.booking.com/Share-KifBB8" class="text-primary"></a><a href="http://www.booking.com/Share-KifBB8" class="text-primary" target="_blank"> Booking.com</a></strong><strong>&nbsp;</strong></li>
-                    </ol>
-                </div>
-            </div>
-			 
-			 <div class="counter-container col-md-6 col-lg-5">
-		        <br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<div class="item-img">
-				<a href="https://wa.me/553592243818" target="_blank">
-                    <img src="assets/images/Cartões-bandeiras.jpg" class="imagem-promo" alt="bandeira-cartoes">
-				</a>	
-                </div>
-			
-               
-            </div>
-		
-			
-        </div>
-    </div>
-</section>
-
-<section class="content6 cid-sg2W0cvkTW" id="content6-7">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-12">
-                <hr class="line">
-                <p class="mbr-text align-center mbr-fonts-style my-4 display-5"><em>“A verdadeira arte de viajar...
-<br>A gente sempre deve sair à rua como quem foge de casa,
-<br>Como se estivessem abertos diante de nós todos os caminhos do mundo. </em><br><em>Não importa que os compromissos, as obrigações, estejam ali... Chegamos de muito longe, de alma aberta e o coração cantando!”<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Mário Quintana</em></p>
-                <hr class="line">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="gallery1 cid-sg2WVHbSkD" id="gallery1-8">
-    
-    
-    <div class="container">
-        <div class="mbr-section-head">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Conheça algumas cachoeiras em nossa volta sô...</strong></h4>
-            
-        </div>
-        <div class="row mt-4">
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/chachoeira-bae.jpg" alt="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"><strong>Juju</strong></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/cachu4.jpg" alt="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7">
-                            <strong>Honorato Ferreira</strong></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/cachu3.jpg" alt="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7">
-                            <strong>Charco</strong>
-                        </h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/5.jpg" alt="" title="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7"><strong>Pôr do Sol no Juju</strong></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/caldeiro.jpeg" alt="" title="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7">
-                            <strong>Caldeirão</strong></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/itauna.jpeg" alt="" title="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7">
-                            <strong>Itaúna</strong></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/das-esmeraldas.jpeg" alt="" title="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7">
-                            <strong>Esmeralda</strong></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/coimbra.jpeg" alt="" title="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-7">
-                            <strong>Coimbra</strong></h5>
-                        
-                        
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="gallery1 cid-sg34XJYPD9" id="gallery1-9">
-    
-    
-    <div class="container">
-        <div class="mbr-section-head">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Um cadin de Baependi...</strong></h4>
-            
-        </div>
-        <div class="row mt-4">
-            
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/baepedndi.jpg" alt="" title="" data-slide-to="4">
-                    </div>
-                    
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/brasilia.jpeg" alt="" data-slide-to="0">
-                    </div>
-                    
-                    
-                </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/praa-de-baependi.jpeg" alt="" data-slide-to="1">
-                    </div>
-                    
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/zvemxaij3x7u9hijhmgd.jpg" alt="" data-slide-to="1">
-                    </div>
-                    
-                    
-                </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/ao-fundo-serra-da-careta.jpeg" alt="" title="" data-slide-to="2">
-                    </div>
-                    
-                    
-                </div>
-            </div><div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/d2a2727c66cae9cfd76a41dc33acef57.jpg" alt="" title="" data-slide-to="2">
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="slider2 cid-sg8MBxxfBa" id="slider2-n">
-    
-
-    
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-9 col-lg-12">
-                <div class="carousel slide" id="sgdT912Y6P" data-ride="carousel" data-interval="3000">
-                    
-                    <ol class="carousel-indicators">
-                        <li data-slide-to="0" class="active" data-target="#sgdT912Y6P"></li>
-                        <li data-slide-to="1" data-target="#sgdT912Y6P"></li><li data-slide-to="2" data-target="#sgdT912Y6P"></li><li data-slide-to="3" data-target="#sgdT912Y6P"></li><li data-slide-to="4" data-target="#sgdT912Y6P"></li><li data-slide-to="5" data-target="#sgdT912Y6P"></li><li data-slide-to="6" data-target="#sgdT912Y6P"></li><li data-slide-to="7" data-target="#sgdT912Y6P"></li><li data-slide-to="8" data-target="#sgdT912Y6P"></li><li data-slide-to="9" data-target="#sgdT912Y6P"></li><li data-slide-to="10" data-target="#sgdT912Y6P"></li><li data-slide-to="11" data-target="#sgdT912Y6P"></li><li data-slide-to="12" data-target="#sgdT912Y6P"></li><li data-slide-to="13" data-target="#sgdT912Y6P"></li><li data-slide-to="14" data-target="#sgdT912Y6P"></li><li data-slide-to="15" data-target="#sgdT912Y6P"></li><li data-slide-to="16" data-target="#sgdT912Y6P"></li><li data-slide-to="17" data-target="#sgdT912Y6P"></li>
-                        
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item slider-image item active">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/8-957x1280.jpg">
-                                
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/10-957x1280.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/2-957x716.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/3-957x1280.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/4-441x443.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/5-957x716.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/6-956x973.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/7-957x1280.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/9-957x716.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/10-957x1280.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/11-948x535.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/12-957x716.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/13-957x716.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/14-957x1280.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/15-957x716.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/16-957x716.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/17-957x1280.jpg">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                <img class="d-block w-100" src="assets/images/18-957x716.jpg">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#sgdT912Y6P">
-                        <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control carousel-control-next" role="button" data-slide="next" href="#sgdT912Y6P">
-                        <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="content6 cid-sg3cA7gaak" id="content6-a">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-12">
-                <hr class="line">
-                <p class="mbr-text align-center mbr-fonts-style my-4 display-5"><em>Nos chame no Whats através do ícone que consta na parte superior&nbsp;</em><br><em><br></em><br><em>Boa Viajem&nbsp;</em><br><em>e<br></em><em>Volte Sempre....</em></p>
-                <hr class="line">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="mbr-instagram-feed" id="instagram-feed-block-q" data-per-row-grid="" data-rows="" data-per-row-slider="4" data-spacing="12" data-full-width="" data-account="pousadaportela" data-rv-view="594" style="background-color: rgb(250, 250, 250); padding-top: 160px; padding-bottom: 160px;">
-    
-    <div class="container container_toggle">
-        <div class="row">
-            <div class="col">
-                <div class="inst">
-                    <h1 class="inst__title align-center mbr-fonts-style display-2">Para promoções e novidades <br>siga-nos no instagram<br><a href="https://www.instagram.com/pousadaportela/" target="_blank" style="color:black">@pousadaportela</a></h1>
-                    <div class="embedsocial-hashtag formato"  data-ref="a08c8cc87538896f78728dec77fc6e9410ae78f1"/>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="footer6 cid-sg2QSo3QMm mbr-parallax-background" once="footers" id="footer6-6">
-
-    
-
-    <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(35, 35, 35);"></div>
-
-    <div class="container">
-        <div class="row content mbr-white">
-            <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
-                    <strong>Endereço</strong></h5>
-                <p class="mbr-text mbr-fonts-style display-7">
-                    R. Neves, 495 - Bairro Ponte<br>Baependi - MG&nbsp;<br>CEP: 37443-000<br><br></p> <br>
-                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 mt-4 display-7">Clique na imagem abaixo para visualizar nosso certificado Cadastur</h5>
-                <a href="assets/images/Cadastur.jpg">
-                <img src="assets/images/Cadastur-logo.png" alt="Certificado Cadastur" class="logo-cadastur">
-                <p class="mbr-text mbr-fonts-style mb-4 display-7"></p>
-            </a>
-            </div>
-            <div class="col-12 col-md-3 mbr-fonts-style display-7">
-			    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><a href="politica_hospedagem2.html"  target="_blank">Politica de Hospedagem</a><br></h5>
-                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><a href="http://www.baependi.mg.gov.br/site/">Prefeitura de Baependi</a><br><br></h5>
-                <ul class="list mbr-fonts-style mb-4 display-7"></ul>
-                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 mt-5 display-7"><strong>Uma prosa sobre viajar</strong></h5>
-                <p class="mbr-text mbr-fonts-style mb-4 display-7">"Como a literatura, o amor e a dor, as viagens são uma bela ocasião para nos encontrarmos com nós próprios"
-<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Marguerite Yourcenar</p>
-                <p>
-                   
-                    
-                    <br>
-                    <a href="https://www.pousadaportela.com.br"></a>
-                   
-
-                </p>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="google-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.3981617557!2d-44.8838422855847!3d-21.957373310200456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9e25b902e8caaf%3A0x7e2a4fb914dd84c4!2sPousada%20Portela%20Chal%C3%A9s!5e1!3m2!1spt-BR!2sbr!4v1632334530047!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-            </div>
-            <div class="col-md-6">
-                <div class="social-list align-left">
-                    <div class="soc-item">
-                        <a href="https://www.facebook.com/pages/Pousada-Sitio-Portela/112277880138971" target="_blank">
-                            <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
-                        </a>
-                    </div>
-                    <div class="soc-item">
-                        <a href="https://wa.me/553592243818?text=Gostaria de reservar um chalé" target="_blank">
-                            <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
-                        </a>
-                    </div>
-                    <div class="soc-item">
-                        <a href="https://www.instagram.com/pousadaportela/" target="_blank">
-                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
-                        </a>
-                    </div>
-                    
-
-
-                    
-                </div>
-            </div>
-        </div>
-        <div class="footer-lower">
-            <div class="media-container-row">
-                <div class="col-sm-12">
-                    <hr>
-                </div>
-            </div>
-            <div class="col-sm-12 copyright pl-0">
-                <p class="mbr-text mbr-fonts-style mbr-white display-7">
-                    © Copyright 2020 Ayslan Portela - Todos os direitos reservados</p>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/web/assets/cookies-alert-plugin/cookies-alert-core.js"></script>  <script src="assets/web/assets/cookies-alert-plugin/cookies-alert-script.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>  <script src="assets/parallax/jarallax.min.js"></script>  <script src="assets/instagram-feed/index.js"></script>  <script src="assets/slick/slick.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
-  
-
-  </body>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
 </html>

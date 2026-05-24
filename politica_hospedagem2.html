@@ -1,434 +1,268 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="pt-BR">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Hospedagem — Pousada Sítio Portela</title>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --laranja-escuro: #b84800;
+      --laranja: #e85d04;
+      --laranja-medio: #f48c3d;
+      --laranja-claro: #ffb347;
+      --laranja-grad: linear-gradient(135deg, #b84800 0%, #e85d04 50%, #f48c3d 100%);
+      --creme: #f9f4ee;
+      --creme-escuro: #ece5d3;
+      --texto: #1a1a18;
+      --texto-muted: #6b6457;
+      --branco: #faf9f6;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--branco); color: var(--texto); }
 
-    <meta charset="UTF-8">
+    /* NAV */
+    nav {
+      background: var(--laranja-grad);
+      padding: 0 48px; height: 72px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 44px; }
+    .nav-back {
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.82); text-decoration: none;
+      display: flex; align-items: center; gap: 8px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--laranja-claro); }
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    /* HERO */
+    .page-hero {
+      background: var(--laranja-grad);
+      padding: 60px 48px 80px;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::after {
+      content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 60px;
+      background: var(--branco);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+    .page-hero-label { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 12px; }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 400; color: #fff; }
+    .page-hero h1 em { font-style: italic; color: var(--laranja-claro); }
+    .page-hero p { font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-top: 12px; }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    /* CONTENT */
+    .policy-content { max-width: 820px; margin: 0 auto; padding: 60px 48px 100px; }
 
-    <link rel="shortcut icon" href="assets/images/chal.png" type="image/x-icon">
+    .policy-block {
+      margin-bottom: 48px;
+      border-left: 3px solid var(--laranja);
+      padding-left: 24px;
+    }
+    .policy-block h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: #2a1500; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .policy-block h2 .icon { font-size: 1.2rem; }
+    .policy-block p, .policy-block li {
+      font-size: 0.93rem; line-height: 1.8; color: var(--texto-muted); font-weight: 300;
+    }
+    .policy-block ul, .policy-block ol {
+      padding-left: 20px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .policy-block li { list-style: disc; }
+    .policy-block ol li { list-style: decimal; }
+    .policy-note {
+      background: var(--creme); border-radius: 4px; padding: 16px 20px;
+      margin-top: 16px; font-size: 0.85rem; color: var(--texto-muted); line-height: 1.7;
+    }
+    .policy-note strong { color: var(--laranja-escuro); }
+    .policy-divider { border: none; border-top: 1px solid var(--creme-escuro); margin: 48px 0; }
 
-    <meta name="description" content="">
+    .policy-highlight {
+      background: var(--laranja-grad); border-radius: 4px; padding: 24px 28px;
+      margin-bottom: 48px; color: #fff;
+    }
+    .policy-highlight h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 12px; }
+    .policy-highlight p { font-size: 0.88rem; color: rgba(255,255,255,0.85); line-height: 1.7; }
 
+    /* FOOTER */
+    .page-footer {
+      background: #1a0a00; padding: 40px 48px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+    }
+    .page-footer .logo img { height: 36px; }
+    .page-footer p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .page-footer a { font-size: 0.8rem; color: rgba(255,255,255,0.55); text-decoration: none; }
+    .page-footer a:hover { color: var(--laranja-claro); }
 
-
-
-
-    <title>Pousada Portela</title>
-
-    <link rel="stylesheet" href="assets/tether/tether.min.css">
-
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-
-    <link rel="stylesheet" href="assets/web/assets/gdpr-plugin/gdpr-styles.css">
-
-    <link rel="stylesheet" href="assets/dropdown/css/style.css">
-
-    <link rel="stylesheet" href="assets/animatecss/animate.css">
-
-    <link rel="stylesheet" href="assets/socicon/css/styles.css">
-
-    <link rel="stylesheet" href="assets/instagram-feed/style.css">
-
-    <link rel="stylesheet" href="assets/slick/slick.css">
-
-    <link rel="stylesheet" href="assets/theme/css/style.css">
-
-    <link rel="preload" as="style" href="assets/estilo-css/css/mbr-additional.css">
-
-    <link rel="stylesheet" href="assets/estilo-css/css/mbr-additional.css" type="text/css">
-
-
-    <style type="text/css">
-        .logo-cadastur {
-
-            width: 245px;
-            height: 80px;
-        }
-    </style>
-
-
-
-
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .page-hero { padding: 48px 24px 70px; }
+      .policy-content { padding: 40px 24px 80px; }
+      .page-footer { padding: 32px 24px; }
+    }
+  </style>
 </head>
-
 <body>
 
-
-
-
-
-
-
-
-
-    <section class="content6 cid-sg2W0cvkTW" id="content6-7">
-
-
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-        <a href="https://wa.me/553592243818?text=Gostaria de reservar um chalé" style="position:fixed;
-
-          width:90px;
-
-		  height:90px;
-
-		  bottom:50px;
-
-		  right:60px;
-
-		  background-color:#25d366;
-
-		  color:#FFF;
-
-		  border-radius:50px;
-
-		  text-align:center;
-
-		  font-size:63px;
-
-		  box-shadow: 3px 1px 2px #888;
-
-          z-index:1000;" target="_blank">
-
-            <i style="margin-top:16px" class="fa fa-whatsapp"></i>
-
-        </a>
-
-
-
-
-
-        <div class="container">
-
-            <div class="row justify-content-center">
-
-                <div class="col-md-12 col-lg-12">
-
-                    <hr class="line">
-
-                    <p class="mbr-text align-center mbr-fonts-style my-4 display-5">Politicas de Hospedagem:<br><br>
-
-                        <center>NÃO ACEITAMOS PETS,
-                            somos uma Pousada Simples portanto nossos preços condiz com o que oferecemos
-
-
-                            <br>
-                            <br>
-
-                            <strong>Proibido Fumar no quarto</strong>
-
-                            Lei nº 12.546 (14 de dezembro de 2011)
-                            Somente na área externa ao ar livre
-
-                            <br>
-                            <br>
-                            <strong>CHECK-IN - CHECK-OUT</strong><br>
-                            Check-in: 10:00Hs as 13:00Hs<br>
-                            Tolerância até as 14:00hs<br>
-                            Check-out: até as 11:00Hs<br>
-                            Passado este horário sua reserva se dará como NO SHOW ( NÃO comparecimento ) e será
-                            cancelada
-                            <br>
-                            <br>
-
-
-                            Crianças até 5 anos não pagam desde que durmam na mesma cama com os pais
-
-                            <br>
-                            <br>
-
-                            <strong>Direito de cancelamento de Reservas</strong>
-                            <br>
-                            <br>
-                            Código de Defesa do Consumidor - LEI Nº 8.078, DE 11 DE SETEMBRO DE 1990.
-                            <br>
-                            <br>
-                            Art. 49. O consumidor pode desistir do contrato, no prazo de 7 dias a contar de sua
-                            assinatura
-                            ou do ato de recebimento do produto ou serviço, sempre que a contratação de fornecimento
-                            de produtos e serviços ocorrer fora do estabelecimento comercial, especialmente por telefone
-                            ou qualquer plataforma online
-                            Com menos de 7 dias da entrada (CHECK-IN na Pousada (NÃO HÁ DEVOLUÇÃO NO VALOR
-                            PAGO de 50% para confirmação da reserva
-                            Pois deixamos de alugar por estar reservado pra você
-                            Não queremos ficar com seu dinheiro
-                            Portanto avise no prazo certo dentro da lei para que seja estornado a você e possamos alugar
-                            novamente
-                            Não recebemos o valor integral na contratação online somente 50% o restante será pago no
-                            check-in em Dinheiro Pix sem taxas ou Cartão crédito acrescido de 5% de taxa ou Débito
-                            acréscimo de 3%
-                            Não aceitamos cartões de terceiros somente do titular da reserva
-                            Não aceitamos cheques
-                            Após seu check-in você receberá
-                            A chave se seu quarto e os controles da tv
-                            Os mesmos deverão ser entregues no seu Check-out
-                            Caso haja danos ou perda dos controles ou pilhas será cobrado uma taxa de 50,00.
-                            <br>
-                            <br>
-                            <strong>Contratação de Reservas</strong>
-                            <br>
-                            <br>
-                            O desconto gerado em pacotes acimas de 2 quartos alugados pelo mesmo titular da reserva 
-                            por meios online ou físico na Portaria da Pousada perdem sua validade caso o titular resolva 
-                            cancelar 1 quarto todos serão cancelados pois o desconto foi gerado no pacote não em quarto 
-                            individual Após canceladas as reservas automaticamente Não impede do contratante alugar 
-                            novamente 1quarto se houver disponibilidade com valor sem desconto conforme catálogo 
-                            enviado no início da contratação
-                            Não aceitamos reservas a cima de 5 diárias
-                            Nas reservas individuais a partir da segunda diária que foi gerado desconto CASO houver 
-                            desconto e haja o pedido de cancelamento do hóspede ou desistência das diárias contratadas 
-                            por 1 diária será cobrado o valor sem desconto e sim o valor informado no catálogo de preços 
-                            das diárias enviado no momento de seu interesse 
-                            Em caso de saída antecipada das diárias contratadas, após o check-in por motivos pessoais 
-                            ou por Não ter gostado da Pousada não haverá devolução do valores pagos pois você teve a 
-                            opção de olhar as fotos com todos os dados dos quartos e teve seu prazo de cancelamento 
-                            antes de vir seguindo os Direitos do Consumido.
-                            <br>
-                            <br>
-                            <strong>Troca de toalhas</strong>
-                            <br>
-                            <br>
-                            Reposição de toalhas a cada 2 dias se preferir troca todos os dias será cobrado taxa por toalhas
-                            A Pousada tem o direito de cancelar imediatamente a reserva do hóspede que desrespeitar as 
-                            regras de boa convivência social e boas maneiras seja presencial ou por atendimento online 
-                            <br>
-                            <br>
-                            <strong>Catálogo</strong>
-                            <br>
-                            <br>
-                            Lá você encontra valores e informações sobre os quartos alugados 
-                            O que Não constar lá Não constará no quarto Consulte o catálogo e veja as opções oferecidas 
-                            temos chalés com frigobar ou sem com café ou sem
-                            Aos chalés que não possuem frigobar tem um filtro com água potável no Corredor chalés 6 7 e 
-                            8 e copos não sendo permitido encher garrafas pois é de uso coletivo assim como as áreas do 
-                            jardim piscina e churrasqueira também são de uso coletivo 
-                            Existem várias lixeiras em frente e ao arredores dos chalés por tanto não jogue lixo no chão 
-                            Tudo estará limpo para receber você e preservamos as áreas ecológicas
-                            portanto não será necessário enviar perguntas perguntando o que não oferecemos 
-                            Descontos poderão ser dados a reservas pacotes a partir de 2 quartos contratados pelo mesmo 
-                            responsável pelas reservas não isentando de fornecer os dados completos de cada ocupante 
-                            dos quartos alugados em seu nome 
-                            São considerado reservas pacotes quando o mesmo contratante aluga 2 ou mais quartos e 
-                            envia comprovante de pagamento em seu nome 
-                            Não É PERMITIDO TRAZER CAFETEIRA RABO QUENTE PANELA ELÉTRICA MICROONDAS NÃO É 
-                            PERMITIDO PREPARAR NENHUM TIPO DE Alimento dentro do Chalé Até mesmo por conta do 
-                            cheiro de comida 
-                            Cada quarto possuem Travesseiros para cada hóspede portanto não fornecemos Travesseiros 
-                            extras
-                            <br>
-                            <br>
-                            <strong>Situações de Força maior</strong>
-                            <br>
-                            <br> 
-                            Situações causadas por motivos de força maior, como chuvas fortes e desastres ambientais que 
-                            causem interrupção de energia elétrica, abastecimento de água, linha telefônica e internet não 
-                            são responsabilidade da Pousada
-                            <br>
-                            <br>
-                            <strong>Piscina</strong>
-                            <br>
-                            <br>
-                            Podem ocorrer imprevistos que impeça seu uso tipo rachaduras vazamentos etc Portanto você 
-                            será avisado pela Pousada sobre a interdição da piscina te dando a opção de cancelar sua 
-                            reserva caso assim prefira e será restituído o valor pago pela sua reserva conforme 
-                            comprovante na contratação online
-                            <br>
-                            <br>
-                            <strong>Breves aviso</strong>
-                            <br>
-                            <br> 
-                            Não é permitido andar sem camisa, de pijama ou em trajes de banho nas áreas comuns da 
-                                    Pousada.
-                                    Não é permitido lavar roupas e sapatos nos banheiros dos quartos. Não é permitido estender 
-                                    roupas nas varandas da Pousada Pede-se o favor de desligar o ventilador ao se ausentar do 
-                                    quarto pois pode gerar cobrança de taxas por desperdício ou acidentes
-                                    <strong>Café da Manhã de 08:00 as 09:30 quando incluso na diária 
-                                    Após este horário o refeitório será fechado</strong> 
-                                    Não É permitido levar alimentos do café para o quarto 
-                                    Não mostramos quartos antes do CHECK-IN liberar chave só após CHECK-IN
-                                    Todos os quartos são higienizados para receber você e são feitas vistorias em todos chuveiros 
-                                    Caso apresente algum problema informe no horário comercial de 09 as 17:00hs e será 
-                                    arrumado na sua presença 
-                                    Uso de secador permitido somente para secar cabelos, usado para secar roupas ou sapatos não 
-                                    é permitido e será cobrado taxa extra devido ao alto gasto de energia
-                                    Lembrando que banhos no quente e Demorado queimam o chuveiro 
-                                    <strong>NÃO TEMOS PORTARIA 24HS FORNECIDAS EM HOTÉIS SOMOS UMA POUSADA
-                                    ANTES DE CONTRATAR VEJA SE ADEQUA AS NORMAS DA POUSADA 
-                                    NÃO ATENDEMOS INTERFONE APÓS AS 00:00HS NEM CHAMADAS VIA WHATSAPP 
-                                    NÃO É PERMITIDO TRAZER PESSOAS PARA DORMIR FORA DA RESERVA SEM FORNECER NOME E 
-                                    DADOS ATE MESMO POR SEGURANÇA DO DONO DA RESERVA
-                                    CASO SEJA DETECTADO PELAS CÂMERAS VISITANTE FORA DO HORÁRIO SEM INDENTIFICAÇAO 
-                                    SERÁ GERADA MULTA AO DONO DO QUARTO</strong>.
-                                    A Pousada é gerenciada por uma família portanto queremos proporcionar a você um ambiente 
-                                    familiar onde você se sinta em casa e seguro 
-                                    Ao pedir marmitex fora da Pousada pedir para enviar talheres 
-                                    Pois não temos para emprestar 
-                                    Ao efetuar a reserva, o hóspede assume estar ciente das normas e Políticas da Pousada 
-                                    enviadas em seu meio de contratação 
-                                    <br>
-                                    <br>
-                                    <br>A Pousada Portela agradece sua estadia 
-                                    <br>Você é muito importante para nós
-                        </center>
-
-
-
-                       
-
-                            <br>
-
-                            <br></em><br><em><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            &nbsp; &nbsp;</em>
-                    </p>
-
-                    <hr class="line">
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-
-
-    <section class="footer6 cid-sg2QSo3QMm mbr-parallax-background" once="footers" id="footer6-6">
-
-
-
-        <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(35, 35, 35);"></div>
-
-        <div class="container">
-            <div class="row content mbr-white">
-                <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
-                        <strong>Endereço</strong>
-                    </h5>
-                    <p class="mbr-text mbr-fonts-style display-7">
-                        R. Neves, 495 - Bairro Ponte<br>Baependi - MG&nbsp;<br>CEP: 37443-000<br><br></p> <br>
-                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 mt-4 display-7">Clique na imagem abaixo para
-                        visualizar nosso certificado Cadastur</h5>
-                    <a href="assets/images/Cadastur.png">
-                        <img src="assets/images/Cadastur-logo.png" alt="Certificado Cadastur" class="logo-cadastur">
-                        <p class="mbr-text mbr-fonts-style mb-4 display-7"></p>
-                    </a>
-                </div>
-                <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><a href="politica_hospedagem.html"
-                            target="_blank">Politica de Hospedagem</a><br></h5>
-                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><a
-                            href="http://www.baependi.mg.gov.br/site/">Prefeitura de Baependi</a><br><br></h5>
-                    <ul class="list mbr-fonts-style mb-4 display-7"></ul>
-                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 mt-5 display-7"><strong>Uma prosa sobre
-                            viajar</strong></h5>
-                    <p class="mbr-text mbr-fonts-style mb-4 display-7">"Como a literatura, o amor e a dor, as viagens
-                        são uma bela ocasião para nos encontrarmos com nós próprios"
-                        <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Marguerite Yourcenar
-                    </p>
-                    <p>
-                    <div id="sfcmk8z8pbeyek93jgam28b6zmsem4uzjbz">
-
-                    </div>
-                    <script type="text/javascript"
-                        src="https://counter1.stat.ovh/private/counter.js?c=mk8z8pbeyek93jgam28b6zmsem4uzjbz&down=async"
-                        async></script>
-                    <br>
-                    <a href="https://www.pousadaportela.com.br"></a>
-                    <noscript>
-                        <a href="https://www.pousadaportela.com.br" title="contador de visitas online">
-                            <img src="https://counter1.stat.ovh/private/webcontadores.php?c=mk8z8pbeyek93jgam28b6zmsem4uzjbz"
-                                width="50px" border="0" title="contador de visitas online"
-                                alt="contador de visitas online"></a>
-                    </noscript>
-
-
-                    </p>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="google-map"><iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.3981617557!2d-44.8838422855847!3d-21.957373310200456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9e25b902e8caaf%3A0x7e2a4fb914dd84c4!2sPousada%20Portela%20Chal%C3%A9s!5e1!3m2!1spt-BR!2sbr!4v1632334530047!5m2!1spt-BR!2sbr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-                </div>
-                <div class="col-md-6">
-                    <div class="social-list align-left">
-                        <div class="soc-item">
-                            <a href="https://www.facebook.com/pages/Pousada-Sitio-Portela/112277880138971"
-                                target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
-                            </a>
-                        </div>
-                        <div class="soc-item">
-                            <a href="https://wa.me/553592243818?text=Gostaria de reservar um chalé" target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
-                            </a>
-                        </div>
-                        <div class="soc-item">
-                            <a href="https://www.instagram.com/pousadaportela/" target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
-                            </a>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-            <div class="footer-lower">
-                <div class="media-container-row">
-                    <div class="col-sm-12">
-                        <hr>
-                    </div>
-                </div>
-                <div class="col-sm-12 copyright pl-0">
-                    <p class="mbr-text mbr-fonts-style mbr-white display-7">
-                        © Copyright 2020 Ayslan Portela - Todos os direitos reservados</p>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <script src="assets/web/assets/jquery/jquery.min.js"></script>
-
-        <script src="assets/popper/popper.min.js"></script>
-        <script src="assets/tether/tether.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/web/assets/cookies-alert-plugin/cookies-alert-core.js"></script>
-        <script src="assets/web/assets/cookies-alert-plugin/cookies-alert-script.js"></script>
-        <script src="assets/smoothscroll/smooth-scroll.js"></script>
-        <script src="assets/dropdown/js/nav-dropdown.js"></script>
-        <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-        <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-        <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>
-        <script src="assets/parallax/jarallax.min.js"></script>
-        <script src="assets/instagram-feed/index.js"></script>
-        <script src="assets/slick/slick.min.js"></script>
-        <script src="assets/theme/js/script.js"></script>
-
-
-
-
-
-
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/logotipo-pousadaportela-prod.png" alt="Pousada Portela">
+  </a>
+  <a href="index.html" class="nav-back">← Voltar ao site</a>
+</nav>
+
+<div class="page-hero">
+  <p class="page-hero-label">Pousada Sítio Portela</p>
+  <h1>Política de <em>Hospedagem</em></h1>
+  <p>Leia com atenção antes de realizar sua reserva</p>
+</div>
+
+<div class="policy-content">
+
+  <div class="policy-highlight">
+    <h3>🏡 Bem-vindo à Pousada Sítio Portela!</h3>
+    <p>Somos uma pousada simples e acolhedora em Baependi-MG. Nossos preços são condizentes com o que oferecemos. Para garantir uma estadia agradável para todos, pedimos que leia nossas políticas abaixo.</p>
+  </div>
+
+  <div class="policy-block">
+    <h2><span class="icon">🚫</span> Regras Gerais</h2>
+    <ul>
+      <li><strong>Não aceitamos pets.</strong></li>
+      <li>É <strong>proibido fumar dentro dos chalés</strong> — Lei nº 12.546/2011. Fumar é permitido somente nas áreas externas ao ar livre.</li>
+      <li>Não é permitido andar sem camisa, de pijama ou em trajes de banho nas áreas comuns da pousada.</li>
+      <li>Não é permitido lavar roupas e sapatos nos banheiros dos chalés.</li>
+      <li>Não é permitido estender roupas nas varandas.</li>
+      <li>Não é permitido preparar nenhum tipo de alimento dentro do chalé — inclusive cafeteira, rabo quente, panela elétrica ou microondas.</li>
+      <li>Por favor, desligue o ventilador ao se ausentar do chalé.</li>
+      <li>Use as lixeiras disponíveis — preservamos nossas áreas ecológicas.</li>
+    </ul>
+  </div>
+
+  <hr class="policy-divider">
+
+  <div class="policy-block">
+    <h2><span class="icon">🕐</span> Check-in e Check-out</h2>
+    <ul>
+      <li><strong>Check-in:</strong> das 10h às 13h (tolerância até 14h)</li>
+      <li><strong>Check-out:</strong> até as 11h</li>
+    </ul>
+    <div class="policy-note">
+      <strong>Atenção:</strong> Passado o horário de check-in sem aviso, a reserva será considerada <strong>No Show</strong> (não comparecimento) e poderá ser cancelada.
+    </div>
+    <p style="margin-top:14px;">Crianças até 5 anos não pagam, desde que durmam na mesma cama que os pais. Não mostramos chalés antes do check-in — a chave é liberada somente após o procedimento.</p>
+  </div>
+
+  <hr class="policy-divider">
+
+  <div class="policy-block">
+    <h2><span class="icon">💳</span> Pagamento</h2>
+    <ul>
+      <li>No momento da contratação online é cobrado <strong>50% do valor</strong> para confirmação da reserva.</li>
+      <li>O restante é pago no check-in nas seguintes formas:</li>
+      <li><strong>PIX</strong> — sem taxas</li>
+      <li><strong>Cartão de crédito</strong> — acréscimo de 5%</li>
+      <li><strong>Cartão de débito</strong> — acréscimo de 3%</li>
+      <li>Não aceitamos cartões de terceiros — somente do titular da reserva.</li>
+      <li>Não aceitamos cheques.</li>
+    </ul>
+  </div>
+
+  <hr class="policy-divider">
+
+  <div class="policy-block">
+    <h2><span class="icon">📅</span> Cancelamento de Reservas</h2>
+    <p>Com base no Código de Defesa do Consumidor (Lei nº 8.078/1990, Art. 49), o consumidor pode cancelar a contratação realizada fora do estabelecimento em até 7 dias.</p>
+    <div class="policy-note">
+      <strong>Cancelamentos com menos de 7 dias antes do check-in:</strong> Não haverá devolução dos 50% pagos na confirmação, pois o chalé ficou reservado para você e deixamos de alocá-lo para outros hóspedes.
+    </div>
+    <ul style="margin-top:16px;">
+      <li>Em caso de saída antecipada após o check-in, por motivos pessoais ou insatisfação, não haverá devolução dos valores pagos.</li>
+      <li>Após cancelamento, não impedimos nova reserva com disponibilidade, porém sem descontos.</li>
+    </ul>
+  </div>
+
+  <hr class="policy-divider">
+
+  <div class="policy-block">
+    <h2><span class="icon">🎁</span> Descontos e Pacotes</h2>
+    <ul>
+      <li>Descontos são concedidos em pacotes com 2 ou mais chalés reservados pelo mesmo titular.</li>
+      <li>O cancelamento de um chalé do pacote implica o cancelamento automático de todos os demais.</li>
+      <li>O desconto é sobre o pacote, não sobre chalés individuais.</li>
+      <li>Não aceitamos reservas acima de 5 diárias.</li>
+    </ul>
+  </div>
+
+  <hr class="policy-divider">
+
+  <div class="policy-block">
+    <h2><span class="icon">🛏️</span> Infraestrutura dos Chalés</h2>
+    <ul>
+      <li>Cada chalé possui travesseiros para cada hóspede — não fornecemos extras.</li>
+      <li>Os chalés são higienizados e vistoriados antes de cada entrada.</li>
+      <li>Chalés sem frigobar possuem filtro de água potável no corredor (uso coletivo — não é permitido encher garrafas).</li>
+      <li>Ao fazer o check-in você receberá a chave do chalé e os controles da TV.</li>
+      <li>Perdas ou danos nos controles ou pilhas: taxa de R$ 50,00.</li>
+      <li>Troca de toalhas a cada 2 dias. Troca diária mediante taxa extra.</li>
+      <li>Uso de secador de cabelo é permitido — não para secar roupas ou calçados.</li>
+      <li>Problemas nos chalés devem ser informados no horário comercial (9h–17h).</li>
+    </ul>
+  </div>
+
+  <hr class="policy-divider">
+
+  <div class="policy-block">
+    <h2><span class="icon">☕</span> Café da Manhã</h2>
+    <ul>
+      <li>Servido das 8h às 9h30, quando incluso na diária.</li>
+      <li>Após este horário o refeitório é fechado.</li>
+      <li>Não é permitido levar alimentos do café para o chalé.</li>
+    </ul>
+  </div>
+
+  <hr class="policy-divider">
+
+  <div class="policy-block">
+    <h2><span class="icon">🏊</span> Piscina</h2>
+    <p>Podem ocorrer imprevistos que impeçam o uso da piscina (rachaduras, vazamentos etc.). Nesses casos, você será avisado com antecedência e terá a opção de cancelar a reserva com reembolso integral.</p>
+  </div>
+
+  <hr class="policy-divider">
+
+  <div class="policy-block">
+    <h2><span class="icon">⚡</span> Situações de Força Maior</h2>
+    <p>Situações causadas por eventos alheios ao controle da pousada — como chuvas fortes, desastres ambientais, interrupção de energia elétrica, água, telefonia ou internet — não são de responsabilidade da Pousada Portela.</p>
+  </div>
+
+  <hr class="policy-divider">
+
+  <div class="policy-block">
+    <h2><span class="icon">🤝</span> Convivência e Respeito</h2>
+    <p>A pousada se reserva o direito de cancelar imediatamente a reserva do hóspede que desrespeitar as regras de boa convivência, seja presencialmente ou por atendimento online.</p>
+    <div class="policy-note" style="margin-top:16px;">
+      Tudo estará limpo e pronto para receber você. Preservamos nossas áreas ecológicas e esperamos que todos contribuam para manter a harmonia do espaço. <strong>Seja muito bem-vindo(a) à Pousada Sítio Portela!</strong>
+    </div>
+  </div>
+
+</div>
+
+<footer class="page-footer">
+  <a href="index.html" class="logo"><img src="assets/images/logotipo-pousadaportela-prod.png" alt="Pousada Portela"></a>
+  <p>© 2025 Pousada Sítio Portela · CNPJ: 35.591.944/0001-65</p>
+  <a href="index.html">← Voltar ao site principal</a>
+</footer>
 
 </body>
-
 </html>

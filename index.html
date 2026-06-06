@@ -254,6 +254,94 @@
       padding: 3px 10px; border: 1px solid rgba(232,93,4,0.3); border-radius: 20px;
     }
 
+    /* ── GALERIA DE FOTOS ── */
+    .galeria-fotos {
+      margin-top: 64px;
+      padding-top: 48px;
+      border-top: 1px solid var(--creme-escuro);
+    }
+    .galeria-fotos-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #2a1500;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .galeria-fotos-titulo em { font-style: italic; color: var(--laranja); }
+    .galeria-fotos-sub {
+      text-align: center;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--texto-muted);
+      margin-bottom: 36px;
+    }
+    .galeria-masonry {
+      columns: 3;
+      column-gap: 14px;
+    }
+    .galeria-item {
+      break-inside: avoid;
+      margin-bottom: 14px;
+      overflow: hidden;
+      border-radius: 3px;
+      position: relative;
+      cursor: pointer;
+    }
+    .galeria-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease;
+      border-radius: 3px;
+    }
+    .galeria-item:hover img { transform: scale(1.04); }
+    .galeria-item-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(184,72,0,0.55) 0%, transparent 60%);
+      opacity: 0; transition: opacity 0.35s;
+      border-radius: 3px;
+    }
+    .galeria-item:hover .galeria-item-overlay { opacity: 1; }
+
+    /* Lightbox */
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(15,10,5,0.92);
+      align-items: center; justify-content: center;
+      backdrop-filter: blur(6px);
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw; max-height: 88vh;
+      border-radius: 4px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: fixed; top: 24px; right: 32px;
+      color: #fff; font-size: 2rem; cursor: pointer;
+      line-height: 1; opacity: 0.8; transition: opacity 0.2s;
+      background: none; border: none; font-family: inherit;
+    }
+    .lightbox-close:hover { opacity: 1; }
+    .lightbox-arrow {
+      position: fixed; top: 50%; transform: translateY(-50%);
+      color: #fff; font-size: 2rem; cursor: pointer;
+      background: rgba(255,255,255,0.1); border: none;
+      width: 52px; height: 52px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s; opacity: 0.8;
+    }
+    .lightbox-arrow:hover { background: rgba(232,93,4,0.6); opacity: 1; }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+    @media (max-width: 768px) {
+      .galeria-masonry { columns: 2; }
+    }
+    @media (max-width: 480px) {
+      .galeria-masonry { columns: 1; }
+    }
+
     /* ── CAMPING ── */
     .camping {
       background: var(--laranja-grad);
@@ -674,6 +762,115 @@
     <div style="text-align:center; margin-top:48px;" class="reveal">
       <a href="https://wa.me/5535992219203?text=Gostaria de verificar disponibilidade e reservar um chalé" target="_blank" class="btn-primary">Verificar Disponibilidade</a>
     </div>
+
+    <!-- GALERIA DE FOTOS -->
+    <div class="galeria-fotos reveal">
+      <p class="galeria-fotos-sub">Conheça a pousada</p>
+      <h3 class="galeria-fotos-titulo">Um lugar feito de <em>arte e natureza</em></h3>
+      <div class="galeria-masonry" id="galeriaGrid">
+        <div class="galeria-item" onclick="openLightbox(0)">
+          <img src="assets/images/galeria-01.jpg" alt="Mural artístico da Pousada Portela">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(1)">
+          <img src="assets/images/galeria-02.jpg" alt="Chalé amarelo com flores pintadas">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(2)">
+          <img src="assets/images/galeria-03.jpg" alt="Chalé rosa com flamingos">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(3)">
+          <img src="assets/images/galeria-04.jpg" alt="Chalé verde com cachoeira pintada">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(4)">
+          <img src="assets/images/galeria-05.jpg" alt="Chalé com cena africana">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(5)">
+          <img src="assets/images/galeria-06.jpg" alt="Corredor dos chalés">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(6)">
+          <img src="assets/images/galeria-07.jpg" alt="Chalé azul com farol e barco">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(7)">
+          <img src="assets/images/galeria-08.jpg" alt="Chalé com girassóis">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(8)">
+          <img src="assets/images/galeria-09.jpg" alt="Área de camping">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(9)">
+          <img src="assets/images/galeria-10.jpg" alt="Camping com palmeiras">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(10)">
+          <img src="assets/images/galeria-11.jpg" alt="Área externa da pousada">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(11)">
+          <img src="assets/images/galeria-12.jpg" alt="Vista dos chalés">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(12)">
+          <img src="assets/images/galeria-13.jpg" alt="Decoração em cerâmica">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(13)">
+          <img src="assets/images/galeria-14.jpg" alt="Gruta e jardim espiritual">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(14)">
+          <img src="assets/images/galeria-15.jpg" alt="Jardim com bananeira e cacto">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(15)">
+          <img src="assets/images/galeria-16.jpg" alt="Jardim tropical">
+          <div class="galeria-item-overlay"></div>
+        </div>
+        <div class="galeria-item" onclick="openLightbox(16)">
+          <img src="assets/images/galeria-17.jpg" alt="Quarto do chalé">
+          <div class="galeria-item-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+  <button class="lightbox-arrow lightbox-prev" onclick="event.stopPropagation(); changePhoto(-1)">&#8249;</button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-arrow lightbox-next" onclick="event.stopPropagation(); changePhoto(1)">&#8250;</button>
+</div>
+
+<!-- AVALIAÇÕES -->
+<section class="section" style="background:var(--creme);">
+  <div class="section-inner">
+    <p class="section-label reveal">O que dizem</p>
+    <h2 class="section-title reveal">Avaliações dos <em>Hóspedes</em></h2>
+    <div class="avaliacoes-grid">
+      <div class="avaliacao-card reveal">
+        <div class="avaliacao-stars">★★★★★</div>
+        <p class="avaliacao-text">"Lugar maravilhoso! A tranquilidade do campo, os chalés muito bem cuidados e o pessoal super atencioso. Voltaremos com certeza!"</p>
+        <p class="avaliacao-autor">— Hóspede via Google</p>
+      </div>
+      <div class="avaliacao-card reveal">
+        <div class="avaliacao-stars">★★★★★</div>
+        <p class="avaliacao-text">"Experiência incrível. As cachoeiras perto são lindíssimas e a pousada é o refúgio perfeito após um dia de trilhas. Recomendo muito!"</p>
+        <p class="avaliacao-autor">— Hóspede via Booking</p>
+      </div>
+      <div class="avaliacao-card reveal">
+        <div class="avaliacao-stars">★★★★★</div>
+        <p class="avaliacao-text">"Atendimento impecável, chalés limpos e confortáveis. A sensação de paz que encontramos na Portela não tem preço. Perfeito para o fim de semana."</p>
+        <p class="avaliacao-autor">— Hóspede via Booking</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -853,31 +1050,6 @@
   </div>
 </section>
 
-<!-- AVALIAÇÕES -->
-<section class="section" style="background:var(--creme);">
-  <div class="section-inner">
-    <p class="section-label reveal">O que dizem</p>
-    <h2 class="section-title reveal">Avaliações dos <em>Hóspedes</em></h2>
-    <div class="avaliacoes-grid">
-      <div class="avaliacao-card reveal">
-        <div class="avaliacao-stars">★★★★★</div>
-        <p class="avaliacao-text">"Lugar maravilhoso! A tranquilidade do campo, os chalés muito bem cuidados e o pessoal super atencioso. Voltaremos com certeza!"</p>
-        <p class="avaliacao-autor">— Hóspede via Google</p>
-      </div>
-      <div class="avaliacao-card reveal">
-        <div class="avaliacao-stars">★★★★★</div>
-        <p class="avaliacao-text">"Experiência incrível. As cachoeiras perto são lindíssimas e a pousada é o refúgio perfeito após um dia de trilhas. Recomendo muito!"</p>
-        <p class="avaliacao-autor">— Hóspede via Booking</p>
-      </div>
-      <div class="avaliacao-card reveal">
-        <div class="avaliacao-stars">★★★★★</div>
-        <p class="avaliacao-text">"Atendimento impecável, chalés limpos e confortáveis. A sensação de paz que encontramos na Portela não tem preço. Perfeito para o fim de semana."</p>
-        <p class="avaliacao-autor">— Hóspede via Booking</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- RESERVA -->
 <section class="section reserva" id="reserva">
   <div class="section-inner">
@@ -1040,6 +1212,50 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+
+  // Lightbox
+  const galeriaFotos = [
+    'assets/images/galeria-01.jpg',
+    'assets/images/galeria-02.jpg',
+    'assets/images/galeria-03.jpg',
+    'assets/images/galeria-04.jpg',
+    'assets/images/galeria-05.jpg',
+    'assets/images/galeria-06.jpg',
+    'assets/images/galeria-07.jpg',
+    'assets/images/galeria-08.jpg',
+    'assets/images/galeria-09.jpg',
+    'assets/images/galeria-10.jpg',
+    'assets/images/galeria-11.jpg',
+    'assets/images/galeria-12.jpg',
+    'assets/images/galeria-13.jpg',
+    'assets/images/galeria-14.jpg',
+    'assets/images/galeria-15.jpg',
+    'assets/images/galeria-16.jpg',
+    'assets/images/galeria-17.jpg',
+  ];
+  let currentPhoto = 0;
+  function openLightbox(index) {
+    currentPhoto = index;
+    document.getElementById('lightboxImg').src = galeriaFotos[index];
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e) {
+    if (!e || e.target === document.getElementById('lightbox') || e.target.classList.contains('lightbox-close')) {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+  function changePhoto(dir) {
+    currentPhoto = (currentPhoto + dir + galeriaFotos.length) % galeriaFotos.length;
+    document.getElementById('lightboxImg').src = galeriaFotos[currentPhoto];
+  }
+  document.addEventListener('keydown', (e) => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowRight') changePhoto(1);
+    if (e.key === 'ArrowLeft') changePhoto(-1);
+    if (e.key === 'Escape') closeLightbox({ target: document.getElementById('lightbox') });
+  });
 </script>
 </body>
 </html>

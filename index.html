@@ -3,8 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pousada Sítio Portela — Chalés privativos e área de camping em Baependi, Sul de Minas Gerais. Natureza, cachoeiras e tranquilidade do campo.">
-  <title>Pousada Sítio Portela — Baependi, MG</title>
+  <title>Pousada em Baependi MG | Chalés e Camping | Pousada Sítio Portela</title>
+  <meta name="description" content="Pousada e camping em Baependi, Sul de Minas. Chalés privativos, piscina, Wi-Fi e mais de 15 cachoeiras por perto. Reserve pelo WhatsApp ou Booking.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Pousada Sítio Portela">
+  <meta name="geo.region" content="BR-MG">
+  <meta name="geo.placename" content="Baependi">
+  <meta name="geo.position" content="-21.957373;-44.883842">
+  <meta name="ICBM" content="-21.957373, -44.883842">
+  <link rel="canonical" href="https://www.pousadaportela.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Pousada Sítio Portela">
+  <meta property="og:url" content="https://www.pousadaportela.com.br/">
+  <meta property="og:title" content="Pousada em Baependi MG | Chalés e Camping | Pousada Sítio Portela">
+  <meta property="og:description" content="Chalés privativos e área de camping em Baependi, Sul de Minas. Natureza, cachoeiras e hospitalidade mineira.">
+  <meta property="og:image" content="https://www.pousadaportela.com.br/assets/images/footer-pousada.jpg">
+  <meta property="og:image:alt" content="Vista da Pousada Sítio Portela em Baependi, MG">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pousada em Baependi MG | Chalés e Camping | Pousada Sítio Portela">
+  <meta name="twitter:description" content="Chalés privativos e área de camping em Baependi, Sul de Minas. Natureza, cachoeiras e hospitalidade mineira.">
+  <meta name="twitter:image" content="https://www.pousadaportela.com.br/assets/images/footer-pousada.jpg">
+
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
@@ -609,26 +633,87 @@
       .baependi-img:first-child { grid-column: span 1; }
       .hero-title { font-size: 2.4rem; }
     }
+
+    /* ── FAQ ── */
+    .faq { background: var(--creme); }
+    .faq-list { max-width: 760px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: var(--branco);
+      border: 1px solid var(--creme-escuro);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 24px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--texto);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      flex-shrink: 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.4rem;
+      color: var(--laranja);
+      line-height: 1;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      padding: 0 24px 20px;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--texto-muted);
+    }
   </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://www.pousadaportela.com.br/#website",
+        "url": "https://www.pousadaportela.com.br/",
+        "name": "Pousada Sítio Portela",
+        "description": "Pousada e camping em Baependi, Sul de Minas Gerais.",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://www.pousadaportela.com.br/#business" }
+      },
+      {
         "@type": ["BedAndBreakfast", "Campground"],
         "@id": "https://www.pousadaportela.com.br/#business",
         "name": "Pousada Sítio Portela",
-        "alternateName": "Pousada Portela",
+        "alternateName": ["Pousada Portela", "Pousada Portela Chalés"],
         "url": "https://www.pousadaportela.com.br/",
         "telephone": "+55-35-99221-9203",
         "description": "Pousada e área de camping em Baependi, no Sul de Minas Gerais. Oferece chalés privativos, piscina, área arborizada para acampamento e proximidade com mais de 15 cachoeiras da região.",
         "taxID": "35.591.944/0001-65",
+        "image": [
+          "https://www.pousadaportela.com.br/assets/images/footer-pousada.jpg",
+          "https://www.pousadaportela.com.br/assets/images/chale-5.jpg",
+          "https://www.pousadaportela.com.br/assets/images/camping-area.jpeg"
+        ],
+        "logo": "https://www.pousadaportela.com.br/assets/images/logotipo-pousadaportela-prod.png",
         "petsAllowed": false,
         "smokingAllowed": false,
         "checkinTime": "10:00:00-03:00",
         "checkoutTime": "11:00:00-03:00",
         "paymentAccepted": "PIX, Credit Card, Debit Card",
         "currenciesAccepted": "BRL",
+        "priceRange": "$$",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "64",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Travessa Hugo Martins Pompeu, 95",
@@ -637,32 +722,23 @@
           "postalCode": "37443-000",
           "addressCountry": "BR"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -21.957373,
+          "longitude": -44.883842
+        },
+        "sameAs": [
+          "https://www.instagram.com/pousadaportela/",
+          "https://www.facebook.com/pousadaportela",
+          "https://www.booking.com/hotel/br/pousada-portela-chales.pt-br.html",
+          "https://www.google.com/travel/hotels/entity/CgoIxIn2ppH3k5V-EAE"
+        ],
         "amenityFeature": [
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Wi-Fi Gratuito",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Piscina Externa",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Estacionamento Gratuito",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Área de Camping",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Aceita Animais (Pet-Friendly)",
-            "value": false
-          }
+          { "@type": "LocationFeatureSpecification", "name": "Wi-Fi Gratuito", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Piscina Externa", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Estacionamento Gratuito", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Área de Camping", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Aceita Animais (Pet-Friendly)", "value": false }
         ],
         "containsPlace": [
           {
@@ -750,6 +826,7 @@
     <a href="#estrutura">Estrutura</a>
     <a href="#cachoeiras">Cachoeiras</a>
     <a href="#baependi">Baependi</a>
+    <a href="#faq">FAQ</a>
     <a href="https://wa.me/5535992219203?text=Gostaria de reservar um chalé" target="_blank" class="nav-cta">Reservar</a>
   </div>
   <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
@@ -810,13 +887,13 @@
         <div class="about-img-accent"></div>
         <div class="about-badge">
           <strong>★ 4.9</strong>
-          <span>Google Reviews</span>
+          <span>64 avaliações Google</span>
         </div>
       </div>
       <div class="about-text">
         <p class="section-label">Nossa história</p>
         <h2 class="section-title">Hospitalidade com <em>alma mineira</em></h2>
-        <p>Localizada em Baependi, no Sul de Minas Gerais, a Pousada Sítio Portela oferece uma experiência autêntica de descanso e conexão com a natureza. Nossa propriedade foi construída com o cuidado de quem ama receber bem.</p>
+        <p>A Pousada Sítio Portela é uma pousada em Baependi, no Sul de Minas Gerais, com chalés privativos e área de camping para quem busca descanso e conexão com a natureza. Nossa propriedade foi construída com o cuidado de quem ama receber bem.</p>
         <p>Próxima do centro da cidade e rodeada por mais de 15 cachoeiras, trilhas e vegetação nativa, a pousada é o ponto de partida perfeito para explorar a riqueza natural da região — ou simplesmente descansar.</p>
         <div class="about-features">
           <div class="about-feature">Chalés privativos</div>
@@ -835,11 +912,11 @@
 <section class="section chales" id="chales">
   <div class="section-inner">
     <p class="section-label reveal">Acomodações</p>
-    <h2 class="section-title reveal">Nossos <em>Chalés</em></h2>
+    <h2 class="section-title reveal">Chalés privativos em <em>Baependi</em></h2>
     <div class="chales-grid">
       <div class="chale-card reveal">
         <div class="chale-img">
-          <img src="assets/images/chale-5.jpg" alt="Chalé do Campo">
+          <img src="assets/images/chale-5.jpg" alt="Chalé do Campo — pousada em Baependi MG" loading="lazy">
           <span class="chale-tag">Destaque</span>
         </div>
         <div class="chale-info">
@@ -855,7 +932,7 @@
       </div>
       <div class="chale-card reveal">
         <div class="chale-img">
-          <img src="assets/images/chale-6.jpg" alt="Chalé da Serra">
+          <img src="assets/images/chale-6.jpg" alt="Chalé da Serra — chalés privativos em Baependi" loading="lazy">
         </div>
         <div class="chale-info">
           <h3 class="chale-name">Chalé da Serra</h3>
@@ -870,7 +947,7 @@
       </div>
       <div class="chale-card reveal">
         <div class="chale-img">
-          <img src="assets/images/quarto-6.jpg" alt="Suíte do Vale">
+          <img src="assets/images/quarto-6.jpg" alt="Suíte do Vale — acomodação para casais na Pousada Portela" loading="lazy">
           <span class="chale-tag">Casal</span>
         </div>
         <div class="chale-info">
@@ -895,71 +972,71 @@
       <h3 class="galeria-fotos-titulo">Um lugar feito de <em>arte e natureza</em></h3>
       <div class="galeria-masonry" id="galeriaGrid">
         <div class="galeria-item" onclick="openLightbox(0)">
-          <img src="assets/images/galeria-01.jpg" alt="Mural artístico da Pousada Portela">
+          <img src="assets/images/galeria-01.jpg" alt="Mural artístico da Pousada Portela" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(1)">
-          <img src="assets/images/galeria-02.jpg" alt="Chalé amarelo com flores pintadas">
+          <img src="assets/images/galeria-02.jpg" alt="Chalé amarelo com flores pintadas" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(2)">
-          <img src="assets/images/galeria-03.jpg" alt="Chalé rosa com flamingos">
+          <img src="assets/images/galeria-03.jpg" alt="Chalé rosa com flamingos" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(3)">
-          <img src="assets/images/galeria-04.jpg" alt="Chalé verde com cachoeira pintada">
+          <img src="assets/images/galeria-04.jpg" alt="Chalé verde com cachoeira pintada" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(4)">
-          <img src="assets/images/galeria-05.jpg" alt="Chalé com cena africana">
+          <img src="assets/images/galeria-05.jpg" alt="Chalé com cena africana" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(5)">
-          <img src="assets/images/galeria-06.jpg" alt="Corredor dos chalés">
+          <img src="assets/images/galeria-06.jpg" alt="Corredor dos chalés" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(6)">
-          <img src="assets/images/galeria-07.jpg" alt="Chalé azul com farol e barco">
+          <img src="assets/images/galeria-07.jpg" alt="Chalé azul com farol e barco" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(7)">
-          <img src="assets/images/galeria-08.jpg" alt="Chalé com girassóis">
+          <img src="assets/images/galeria-08.jpg" alt="Chalé com girassóis" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(8)">
-          <img src="assets/images/galeria-09.jpg" alt="Área de camping">
+          <img src="assets/images/galeria-09.jpg" alt="Área de camping" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(9)">
-          <img src="assets/images/galeria-10.jpg" alt="Camping com palmeiras">
+          <img src="assets/images/galeria-10.jpg" alt="Camping com palmeiras" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(10)">
-          <img src="assets/images/galeria-11.jpg" alt="Área externa da pousada">
+          <img src="assets/images/galeria-11.jpg" alt="Área externa da pousada" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(11)">
-          <img src="assets/images/galeria-12.jpg" alt="Vista dos chalés">
+          <img src="assets/images/galeria-12.jpg" alt="Vista dos chalés" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(12)">
-          <img src="assets/images/galeria-13.jpg" alt="Decoração em cerâmica">
+          <img src="assets/images/galeria-13.jpg" alt="Decoração em cerâmica" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(13)">
-          <img src="assets/images/galeria-14.jpg" alt="Gruta e jardim espiritual">
+          <img src="assets/images/galeria-14.jpg" alt="Gruta e jardim espiritual" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(14)">
-          <img src="assets/images/galeria-15.jpg" alt="Jardim com bananeira e cacto">
+          <img src="assets/images/galeria-15.jpg" alt="Jardim com bananeira e cacto" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(15)">
-          <img src="assets/images/galeria-16.jpg" alt="Jardim tropical">
+          <img src="assets/images/galeria-16.jpg" alt="Jardim tropical" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
         <div class="galeria-item" onclick="openLightbox(16)">
-          <img src="assets/images/galeria-17.jpg" alt="Quarto do chalé">
+          <img src="assets/images/galeria-17.jpg" alt="Quarto do chalé" loading="lazy">
           <div class="galeria-item-overlay"></div>
         </div>
       </div>
@@ -1004,12 +1081,12 @@
 <section class="camping" id="camping">
   <div class="camping-inner">
     <div class="camping-img-wrap reveal">
-      <img src="assets/images/camping-area.jpeg" alt="Área de Camping Pousada Portela">
+      <img src="assets/images/camping-area.jpeg" alt="Área de camping da Pousada Portela em Baependi" loading="lazy">
     </div>
     <div class="camping-text reveal">
       <p class="camping-label">Nova experiência</p>
-      <h2 class="camping-title">Área de <em>Camping</em></h2>
-      <p>Para quem quer se aproximar ainda mais da natureza, a Pousada Portela oferece uma área de camping exclusiva, rodeada de verde e com toda a infraestrutura que você precisa para dormir sob as estrelas.</p>
+      <h2 class="camping-title">Camping em <em>Baependi</em></h2>
+      <p>Para quem quer se aproximar ainda mais da natureza, a Pousada Portela oferece uma área de camping exclusiva, rodeada de verde e com toda a infraestrutura que você precisa para dormir sob as estrelas — tomadas, banheiros com duchas, Wi-Fi e acesso à piscina.</p>
       <p>Sinta a brisa da serra, ouça os sons da mata e acorde com o canto dos pássaros em Baependi.</p>
       <div class="camping-features">
         <div class="camping-feature">Área arborizada</div>
@@ -1090,26 +1167,26 @@
   </div>
   <div style="overflow:hidden;">
     <div class="galeria-track">
-      <div class="galeria-frame"><img src="assets/images/pousada-portela2.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/pousada-portela3.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/pousada-portela4.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/chal3.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/chale-2.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/chale-10.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/chale-11.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/pscina.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/redes.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/caf-da-manh-2.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/pousada-portela2.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/pousada-portela3.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/pousada-portela4.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/chal3.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/chale-2.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/chale-10.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/chale-11.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/pscina.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/redes.jpg" alt=""></div>
-      <div class="galeria-frame"><img src="assets/images/caf-da-manh-2.jpg" alt=""></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela2.jpg" alt="Fachada e jardim da Pousada Sítio Portela" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela3.jpg" alt="Área externa da pousada em Baependi" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela4.jpg" alt="Ambiente externo da Pousada Portela" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/chal3.jpg" alt="Chalé da Pousada Sítio Portela" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/chale-2.jpg" alt="Interior de chalé privativo" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/chale-10.jpg" alt="Quarto aconchegante do chalé" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/chale-11.jpg" alt="Detalhe do quarto na pousada" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/pscina.jpg" alt="Piscina da Pousada Sítio Portela" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/redes.jpg" alt="Redes para descanso no jardim" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/caf-da-manh-2.jpg" alt="Café da manhã servido na pousada" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela2.jpg" alt="Fachada e jardim da Pousada Sítio Portela" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela3.jpg" alt="Área externa da pousada em Baependi" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/pousada-portela4.jpg" alt="Ambiente externo da Pousada Portela" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/chal3.jpg" alt="Chalé da Pousada Sítio Portela" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/chale-2.jpg" alt="Interior de chalé privativo" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/chale-10.jpg" alt="Quarto aconchegante do chalé" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/chale-11.jpg" alt="Detalhe do quarto na pousada" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/pscina.jpg" alt="Piscina da Pousada Sítio Portela" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/redes.jpg" alt="Redes para descanso no jardim" loading="lazy"></div>
+      <div class="galeria-frame"><img src="assets/images/caf-da-manh-2.jpg" alt="Café da manhã servido na pousada" loading="lazy"></div>
     </div>
   </div>
 </div>
@@ -1120,8 +1197,8 @@
     <div class="cachoeiras-intro reveal">
       <div class="cachoeiras-intro-text">
         <p class="section-label">Natureza em volta</p>
-        <h2 class="section-title">Cachoeiras para<br><em>explorar</em></h2>
-        <p>A região de Baependi é um paraíso para quem ama natureza. Ao redor da pousada você encontrará dezenas de cachoeiras acessíveis, cada uma com uma beleza única — do Caldeirão às Esmeraldas.</p>
+        <h2 class="section-title">Cachoeiras perto da<br><em>pousada em Baependi</em></h2>
+        <p>A região de Baependi é um paraíso para quem ama natureza. Ao redor da Pousada Sítio Portela você encontrará dezenas de cachoeiras acessíveis, cada uma com uma beleza única — do Caldeirão às Esmeraldas.</p>
       </div>
       <div style="text-align:center;">
         <div class="cachoeiras-count">15+</div>
@@ -1129,14 +1206,14 @@
       </div>
     </div>
     <div class="cachoeiras-grid reveal">
-      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/chachoeira-bae.jpg" alt="Juju"><div class="cachoeira-label">Cachoeira Juju</div></div>
-      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/cachu4.jpg" alt="Honorato Ferreira"><div class="cachoeira-label">Honorato Ferreira</div></div>
-      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/das-esmeraldas.jpeg" alt="Esmeralda"><div class="cachoeira-label">Esmeralda</div></div>
-      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/cachu3.jpg" alt="Charco"><div class="cachoeira-label">Charco</div></div>
-      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/caldeiro.jpeg" alt="Caldeirão"><div class="cachoeira-label">Caldeirão</div></div>
-      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/itauna.jpeg" alt="Itaúna"><div class="cachoeira-label">Itaúna</div></div>
-      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/coimbra.jpeg" alt="Coimbra"><div class="cachoeira-label">Coimbra</div></div>
-      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/5.jpg" alt="Pôr do Sol no Juju"><div class="cachoeira-label">Pôr do Sol no Juju</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/chachoeira-bae.jpg" alt="Cachoeira Juju perto de Baependi MG" loading="lazy"><div class="cachoeira-label">Cachoeira Juju</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/cachu4.jpg" alt="Cachoeira Honorato Ferreira em Baependi" loading="lazy"><div class="cachoeira-label">Honorato Ferreira</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/das-esmeraldas.jpeg" alt="Cachoeira Esmeralda próximo à pousada" loading="lazy"><div class="cachoeira-label">Esmeralda</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/cachu3.jpg" alt="Cachoeira Charco em Baependi" loading="lazy"><div class="cachoeira-label">Charco</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/caldeiro.jpeg" alt="Cachoeira do Caldeirão em Baependi" loading="lazy"><div class="cachoeira-label">Caldeirão</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/itauna.jpeg" alt="Cachoeira Itaúna no Sul de Minas" loading="lazy"><div class="cachoeira-label">Itaúna</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/coimbra.jpeg" alt="Cachoeira Coimbra perto da Pousada Portela" loading="lazy"><div class="cachoeira-label">Coimbra</div></div>
+      <div class="cachoeira-card"><img class="cachoeira-img" src="assets/images/5.jpg" alt="Pôr do sol na Cachoeira Juju em Baependi" loading="lazy"><div class="cachoeira-label">Pôr do Sol no Juju</div></div>
     </div>
   </div>
 </section>
@@ -1146,9 +1223,9 @@
   <div class="section-inner">
     <div class="baependi-grid reveal">
       <div class="baependi-images">
-        <img class="baependi-img" src="assets/images/praa-de-baependi.jpeg" alt="Praça de Baependi">
-        <img class="baependi-img" src="assets/images/brasilia.jpeg" alt="Baependi">
-        <img class="baependi-img" src="assets/images/baepedndi.jpg" alt="Baependi cidade">
+        <img class="baependi-img" src="assets/images/praa-de-baependi.jpeg" alt="Praça histórica de Baependi MG" loading="lazy">
+        <img class="baependi-img" src="assets/images/brasilia.jpeg" alt="Centro histórico de Baependi" loading="lazy">
+        <img class="baependi-img" src="assets/images/baepedndi.jpg" alt="Vista da cidade de Baependi no Sul de Minas" loading="lazy">
       </div>
       <div>
         <p class="section-label">Conheça a cidade</p>
@@ -1160,7 +1237,7 @@
             <div><div style="font-weight:500;">Prefeitura de Baependi</div><div style="font-size:0.75rem; color:var(--texto-muted);">Site oficial da cidade</div></div>
             <span style="margin-left:auto; color:var(--laranja);">→</span>
           </a>
-          <a href="politica_hospedagem2.html" target="_blank" class="baependi-link">
+          <a href="politica_hospedagem.html" target="_blank" class="baependi-link">
             <span>📋</span>
             <div><div style="font-weight:500;">Política de Hospedagem</div><div style="font-size:0.75rem; color:var(--texto-muted);">Regras e informações</div></div>
             <span style="margin-left:auto; color:var(--laranja);">→</span>
@@ -1203,7 +1280,7 @@
           </div>
           <span class="reserva-arrow">→</span>
         </a>
-        <a href="politica_hospedagem2.html" target="_blank" class="reserva-option">
+        <a href="politica_hospedagem.html" target="_blank" class="reserva-option">
           <div class="reserva-option-info">
             <span class="reserva-option-icon">📋</span>
             <div>
@@ -1241,6 +1318,36 @@
   </a>
 </div>
 
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="section-inner">
+    <p class="section-label reveal">Dúvidas frequentes</p>
+    <h2 class="section-title reveal">Perguntas sobre a <em>pousada</em></h2>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>A Pousada Sítio Portela aceita pets (animais de estimação)?</summary>
+        <p>Não, a Pousada Sítio Portela não aceita animais de estimação em nenhuma de suas acomodações ou áreas comuns.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Quais são os horários de check-in e check-out?</summary>
+        <p>O check-in ocorre das 10h às 13h (com tolerância máxima até as 14h mediante aviso prévio). O check-out deve ser realizado até as 11h.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>O café da manhã está incluso na diária?</summary>
+        <p>O café da manhã é servido das 8h às 9h30, estando incluso em pacotes de hospedagem a partir de 3 diárias.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>A pousada possui estrutura para camping?</summary>
+        <p>Sim, a pousada conta com uma área arborizada para camping equipada com banheiros, duchas, pontos de energia/tomadas, Wi-Fi gratuito e acesso à piscina e estacionamento.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Quais são as formas de pagamento aceitas?</summary>
+        <p>É exigido sinal de 50% para confirmação de reserva. O saldo restante pode ser pago no check-in via PIX (sem taxas), cartão de crédito ou cartão de débito.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -1270,13 +1377,14 @@
         <li><a href="#estrutura">Estrutura</a></li>
         <li><a href="#cachoeiras">Cachoeiras</a></li>
         <li><a href="#baependi">Baependi</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#reserva">Reservar</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Links Úteis</h4>
       <ul>
-        <li><a href="politica_hospedagem2.html" target="_blank">Política de Hospedagem</a></li>
+        <li><a href="politica_hospedagem.html" target="_blank">Política de Hospedagem</a></li>
         <li><a href="https://www.booking.com/hotel/br/pousada-portela-chales.pt-br.html" target="_blank">Booking.com</a></li>
         <li><a href="http://www.baependi.mg.gov.br/site/" target="_blank">Prefeitura de Baependi</a></li>
       </ul>
@@ -1285,7 +1393,7 @@
       <div class="footer-address">
         <strong>Endereço</strong>
         Travessa Hugo Martins Pompeu, 95<br>
-        Baependi — MG<br><br>
+        Baependi — MG · CEP 37443-000<br><br>
         <a href="https://wa.me/5535992219203" style="color:rgba(255,255,255,0.55); text-decoration:none;">📱 (35) 99221-9203</a>
       </div>
       <div class="footer-map">
@@ -1295,7 +1403,7 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-bottom-left">
-      <p>© 2025 Pousada Sítio Portela · Todos os direitos reservados · Ayslan Portela</p>
+      <p>© 2026 Pousada Sítio Portela · Todos os direitos reservados · Ayslan Portela</p>
       <p>CNPJ: 35.591.944/0001-65</p>
     </div>
     <div class="cadastur">

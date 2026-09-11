@@ -1,4 +1,12 @@
-# CONFIGURAR UTILIZAÇÃO DO HTTPS
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^pousadaportela.com.br [NC]
-RewriteRule (.*) http://www.pousadaportela.com.br/$1 [L,R=301]
+# Compatível com Umbler (proxy SSL)
+# NÃO use RewriteCond %{HTTPS} off — causa loop / site fora do ar
+
+RewriteEngine On
+
+# Força HTTPS + www usando o header do proxy da Umbler
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+RewriteCond %{HTTP_HOST} ^pousadaportela\.com\.br$ [NC]
+RewriteRule ^(.*)$ https://www.pousadaportela.com.br/$1 [L,R=301]
+
+# URL antiga da política → arquivo canônico
+RewriteRule ^politica_hospedagem2\.html$ /politica_hospedagem.html [L,R=301]
